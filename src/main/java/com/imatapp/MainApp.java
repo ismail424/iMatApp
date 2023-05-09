@@ -26,6 +26,8 @@ public class MainApp extends Application {
         Scene scene = new Scene(loadFXML(fxml));
         stage.setTitle(title);
         stage.setScene(scene);
+        stage.minWidthProperty().setValue(1100);
+        stage.minHeightProperty().setValue(700);
         stage.show();
     }
 
