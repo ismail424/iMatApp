@@ -7,15 +7,16 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
 <AnchorPane id="AnchorPane" minHeight="700.0" minWidth="1100.0" prefWidth="1228.0" style="-fx-background-color: #F3F3F3;" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.imatapp.PrimaryController">
     <children>
-      <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <AnchorPane maxHeight="170.0" minHeight="110.0" minWidth="-Infinity" VBox.vgrow="ALWAYS">
+      <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane maxHeight="170.0" minHeight="110.0" minWidth="-Infinity">
                <children>
                   <VBox spacing="20.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
                      <children>
@@ -26,7 +27,7 @@
                                     <Insets />
                                  </HBox.margin>
                               </TextField>
-                              <Button id="navbar_account_button" fx:id="account_button" alignment="CENTER" graphicTextGap="20.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="70.0" styleClass="navbar_buttons" text="KONTO" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+                              <Button id="navbar_account_button" fx:id="accountButton" alignment="CENTER" graphicTextGap="20.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="70.0" styleClass="navbar_buttons" text="KONTO" textAlignment="CENTER" HBox.hgrow="ALWAYS">
                                  <graphic>
                                     <ImageView fitHeight="29.0" fitWidth="26.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -40,9 +41,9 @@
                               <Insets />
                            </VBox.margin>
                         </HBox>
-                        <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="40.0" VBox.vgrow="ALWAYS">
+                        <HBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="20.0" VBox.vgrow="ALWAYS">
                            <children>
-                              <Button fx:id="packages_button" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Paketer" textOverrun="CLIP" HBox.hgrow="ALWAYS">
+                              <Button fx:id="packagesButton" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Paketer" textOverrun="CLIP" HBox.hgrow="ALWAYS">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
@@ -51,34 +52,58 @@
                                     <String fx:value="navbar_active" />
                                  </styleClass>
                               </Button>
-                              <Button fx:id="allproducts_button" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="navbar_buttons" text="Alla Varor" textOverrun="CLIP" HBox.hgrow="ALWAYS">
+                              <Button fx:id="allproductsButton" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="navbar_buttons" text="Alla Varor" textOverrun="CLIP" HBox.hgrow="ALWAYS">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
                               </Button>
-                              <Button fx:id="shoppingcart_button" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="navbar_buttons" text="Varukorg" textOverrun="CLIP" HBox.hgrow="ALWAYS">
+                              <Button fx:id="shoppingcartButton" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="navbar_buttons" text="Varukorg" textOverrun="CLIP" HBox.hgrow="ALWAYS">
                                  <HBox.margin>
                                     <Insets />
                                  </HBox.margin>
                               </Button>
                            </children>
                            <padding>
-                              <Insets bottom="5.0" top="5.0" />
+                              <Insets bottom="5.0" left="10.0" top="5.0" />
                            </padding>
                         </HBox>
                      </children>
                   </VBox>
                </children>
+               <BorderPane.margin>
+                  <Insets bottom="20.0" />
+               </BorderPane.margin>
             </AnchorPane>
-            <Pane fx:id="mainPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="1168.0" VBox.vgrow="ALWAYS">
+         </top>
+         <center>
+            <StackPane BorderPane.alignment="CENTER">
                <children>
-                  <fx:include source="pages/paketer.fxml" />
+                  <AnchorPane fx:id="packagesPane">
+                     <children>
+                        <fx:include source="pages/paketer.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="allproductsPane" visible="false">
+                     <children>
+                        <fx:include source="pages/alla_varor.fxml" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="shoppingcartPane" visible="false">
+                     <children>
+                        <fx:include source="pages/varukorg.fxml" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="accountPane" visible="false">
+                     <children>
+                        <fx:include source="pages/konto.fxml" />
+                     </children>
+                  </AnchorPane>
                </children>
-            </Pane>
-         </children>
-      </VBox>
+            </StackPane>
+         </center>
+      </BorderPane>
     </children>
    <padding>
-      <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+      <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
    </padding>
 </AnchorPane>

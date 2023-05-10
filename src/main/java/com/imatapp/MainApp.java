@@ -27,7 +27,7 @@ public class MainApp extends Application {
         stage.setTitle(title);
         stage.setScene(scene);
         stage.minWidthProperty().setValue(1100);
-        stage.minHeightProperty().setValue(700);
+        stage.minHeightProperty().setValue(950);
         stage.show();
     }
 
