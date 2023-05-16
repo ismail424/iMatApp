@@ -1,6 +1,7 @@
 package com.imatapp;
 
 
+import com.imatapp.components.NavigationButton;
 import javafx.animation.FadeTransition;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -14,7 +15,7 @@ public class PrimaryController  {
     @FXML
     private Button packagesButton, allproductsButton, shoppingcartButton, accountButton;
 
-    protected NavigationButton[] navigationButtons;
+    public NavigationButton[] navigationButtons;
 
     @FXML
     private StackPane mainStackPane;
@@ -42,7 +43,7 @@ public class PrimaryController  {
 
     }   
 
-    protected void switchPage( AnchorPane newPane){
+    public void switchPage( AnchorPane newPane){
         if (newPane == currentShowingPane){
             return;
         }

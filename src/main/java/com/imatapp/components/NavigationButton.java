@@ -1,6 +1,6 @@
-package com.imatapp;
+package com.imatapp.components;
 
-
+import com.imatapp.PrimaryController;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 
