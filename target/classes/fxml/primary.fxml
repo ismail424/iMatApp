@@ -3,12 +3,12 @@
 <?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
@@ -22,11 +22,12 @@
                      <children>
                         <HBox alignment="CENTER" spacing="30.0" VBox.vgrow="ALWAYS">
                            <children>
-                              <TextField id="navbar_search_box" fx:id="searchbar" prefHeight="70.0" prefWidth="689.0" promptText="Sök efter produkter" HBox.hgrow="ALWAYS">
-                                 <HBox.margin>
-                                    <Insets />
-                                 </HBox.margin>
-                              </TextField>
+                              <ImageView fitHeight="80.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                                 <image>
+                                    <Image url="@../images/logo.png" />
+                                 </image>
+                              </ImageView>
+                              <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
                               <Button id="navbar_account_button" fx:id="accountButton" alignment="CENTER" graphicTextGap="20.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="70.0" styleClass="navbar_buttons" text="KONTO" textAlignment="CENTER" HBox.hgrow="ALWAYS">
                                  <graphic>
                                     <ImageView fitHeight="29.0" fitWidth="26.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
