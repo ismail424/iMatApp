@@ -14,20 +14,21 @@ import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
 
 public class PackageCard {
-    Packages parentController;
     private PackageItem[] displayItems;
     private VBox card;
     private Button addToCart;
-    private Text totalPriceSumText, cardTitle;
+    private Text totalPriceSumText, cardTitle, itemAmount;
+    private IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
-    public PackageCard(Packages parentController, VBox card, String title, int price, Product[] displayItemsData) {
-        this.parentController = parentController;
+    public PackageCard(VBox card, String title, int price, Product[] displayItemsData) {
         this.card = card;
 
         cardTitle = (Text) card.lookup(".package_card_title");
         totalPriceSumText = (Text) card.lookup(".package_card_totalprice_sum");
         addToCart = (Button) card.lookup(".package_card_button");
-  
+        itemAmount = (Text) card.lookup(".package_card_item_amount");
+
+        cardTitle.setText(title);
         displayItems = new PackageItem[displayItemsData.length];
 
         int i = 0;
@@ -37,7 +38,7 @@ public class PackageCard {
             displayItems[currentIndex] = new PackageItem((HBox) item, displayItemsData[currentIndex]);
         });
 
-        cardTitle.setText(title);
+        itemAmount.setText("+"+String.valueOf(displayItems.length) + " Varor Till");
         totalPriceSumText.setText(String.valueOf(price) + " kr");
     }
 
@@ -56,7 +57,7 @@ public class PackageCard {
             itemPriceDecimal = (Text) item.lookup(".package_card_item_price_decimal");
 
             itemTitle.setText(data.getName());
-            itemImage.setImage(parentController.iMatDataHandler.getFXImage( data ) );
+            itemImage.setImage(iMatDataHandler.getFXImage( data ) );
             itemprice.setText(String.valueOf(
                 (int) data.getPrice()
             ));
@@ -73,7 +74,7 @@ public class PackageCard {
                 decimalPart = "99";
             }
             itemPriceDecimal.setText(decimalPart);
-            itemUnit.setText( data.getUnit() );
+            itemUnit.setText( " " + data.getUnit() );
         }
     }
 

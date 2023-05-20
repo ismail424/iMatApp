@@ -8,6 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane maxWidth="-Infinity" prefHeight="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.imatapp.pages.Packages">
@@ -16,11 +17,11 @@
          <children>
             <VBox fx:id="dagensErbjudandeCard" alignment="TOP_CENTER" maxHeight="900.0" maxWidth="650.0" minHeight="400.0" minWidth="200.0" prefWidth="250.0" spacing="30.0" styleClass="package_card" HBox.hgrow="ALWAYS">
                <cursor>
-                  <Cursor fx:constant="HAND" />
+                  <Cursor fx:constant="DEFAULT" />
                </cursor>
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="package_card_title" text="Dagens Erbjudande" VBox.vgrow="ALWAYS" />
-                  <VBox alignment="TOP_CENTER" minWidth="50.0" prefHeight="85.0" prefWidth="0.0" VBox.vgrow="ALWAYS">
+                  <VBox alignment="TOP_CENTER" minWidth="50.0" prefHeight="85.0" prefWidth="0.0" styleClass="package_card_content" VBox.vgrow="ALWAYS">
                      <children>
                         <HBox alignment="CENTER_LEFT" prefHeight="85.0" prefWidth="364.0" spacing="20.0" styleClass="package_card_item" VBox.vgrow="ALWAYS">
                            <children>
@@ -40,7 +41,7 @@
                                                 <Insets />
                                              </HBox.margin>
                                           </Text>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="package_card_item_unit" text="/ kg" wrappingWidth="113.60000038146973" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="package_card_item_unit" text="/ kg" wrappingWidth="191.60000038146973" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -71,7 +72,7 @@
                                                 <Insets />
                                              </HBox.margin>
                                           </Text>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="package_card_item_unit" text="/ kg" wrappingWidth="113.60000038146973" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="package_card_item_unit" text="/ kg" wrappingWidth="201.60000038146973" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -102,7 +103,7 @@
                                                 <Insets />
                                              </HBox.margin>
                                           </Text>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="package_card_item_unit" text="/ kg" wrappingWidth="113.60000038146973" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="package_card_item_unit" text="/ kg" wrappingWidth="205.60000038146973" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -115,7 +116,27 @@
                               <Insets bottom="5.0" left="10.0" top="5.0" />
                            </padding>
                         </HBox>
+                        <VBox alignment="CENTER" prefWidth="100.0" VBox.vgrow="NEVER">
+                           <children>
+                              <Text fill="#282828" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="package_card_item_amount" text="+4 Varor Till" textAlignment="CENTER" wrappingWidth="170.67499923706055">
+                                 <font>
+                                    <Font name="Lato Regular" size="24.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#0a7935" strokeType="OUTSIDE" strokeWidth="0.0" text="Vissa Allt" textAlignment="CENTER" wrappingWidth="170.67499923706055">
+                                 <font>
+                                    <Font name="Lato Bold" size="36.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <padding>
+                              <Insets bottom="20.0" />
+                           </padding>
+                        </VBox>
                      </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </VBox>
                   <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefWidth="94.0" spacing="5.0" VBox.vgrow="ALWAYS">
                      <children>
@@ -123,7 +144,10 @@
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="package_card_totalprice_sum" text="199 kr" />
                      </children>
                   </HBox>
-                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="package_card_button" text="Lägg till i Varukorgen" VBox.vgrow="ALWAYS" />
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="package_card_button" text="Lägg till i Varukorgen" VBox.vgrow="ALWAYS">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
                </children>
                <HBox.margin>
                   <Insets />
@@ -131,11 +155,11 @@
             </VBox>
             <VBox fx:id="senasteOrderCard" alignment="TOP_CENTER" maxHeight="900.0" maxWidth="650.0" minHeight="400.0" minWidth="200.0" prefWidth="250.0" spacing="30.0" styleClass="package_card" HBox.hgrow="ALWAYS">
                <cursor>
-                  <Cursor fx:constant="HAND" />
+                  <Cursor fx:constant="DEFAULT" />
                </cursor>
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="package_card_title" text="Dagens Erbjudande" VBox.vgrow="ALWAYS" />
-                  <VBox alignment="TOP_CENTER" minWidth="50.0" prefHeight="85.0" prefWidth="0.0" VBox.vgrow="ALWAYS">
+                  <VBox alignment="TOP_CENTER" minWidth="50.0" prefHeight="85.0" prefWidth="0.0" styleClass="package_card_content" VBox.vgrow="ALWAYS">
                      <children>
                         <HBox alignment="CENTER_LEFT" prefHeight="85.0" prefWidth="364.0" spacing="20.0" styleClass="package_card_item" VBox.vgrow="ALWAYS">
                            <children>
@@ -155,7 +179,7 @@
                                                 <Insets />
                                              </HBox.margin>
                                           </Text>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="package_card_item_unit" text="/ kg" wrappingWidth="113.60000038146973" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="package_card_item_unit" text="/ kg" wrappingWidth="191.60000038146973" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -186,7 +210,7 @@
                                                 <Insets />
                                              </HBox.margin>
                                           </Text>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="package_card_item_unit" text="/ kg" wrappingWidth="113.60000038146973" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="package_card_item_unit" text="/ kg" wrappingWidth="201.60000038146973" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -217,7 +241,7 @@
                                                 <Insets />
                                              </HBox.margin>
                                           </Text>
-                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="package_card_item_unit" text="/ kg" wrappingWidth="113.60000038146973" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="package_card_item_unit" text="/ kg" wrappingWidth="205.60000038146973" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -230,7 +254,27 @@
                               <Insets bottom="5.0" left="10.0" top="5.0" />
                            </padding>
                         </HBox>
+                        <VBox alignment="CENTER" prefWidth="100.0" VBox.vgrow="NEVER">
+                           <children>
+                              <Text fill="#282828" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="package_card_item_amount" text="+4 Varor Till" textAlignment="CENTER" wrappingWidth="170.67499923706055">
+                                 <font>
+                                    <Font name="Lato Regular" size="24.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="#0a7935" strokeType="OUTSIDE" strokeWidth="0.0" text="Vissa Allt" textAlignment="CENTER" wrappingWidth="170.67499923706055">
+                                 <font>
+                                    <Font name="Lato Bold" size="36.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <padding>
+                              <Insets bottom="20.0" />
+                           </padding>
+                        </VBox>
                      </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </VBox>
                   <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefWidth="94.0" spacing="5.0" VBox.vgrow="ALWAYS">
                      <children>
@@ -238,7 +282,10 @@
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="package_card_totalprice_sum" text="199 kr" />
                      </children>
                   </HBox>
-                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="package_card_button" text="Lägg till i Varukorgen" VBox.vgrow="ALWAYS" />
+                  <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="package_card_button" text="Lägg till i Varukorgen" VBox.vgrow="ALWAYS">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
                </children>
             </VBox>
          </children>

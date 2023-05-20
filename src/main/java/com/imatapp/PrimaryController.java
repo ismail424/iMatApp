@@ -9,8 +9,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.util.Duration;
+import se.chalmers.cse.dat216.project.IMatDataHandler;
 
 public class PrimaryController  {
+    private IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
     @FXML
     private Button packagesButton, allproductsButton, shoppingcartButton, accountButton;

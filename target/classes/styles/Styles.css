@@ -64,14 +64,21 @@
 /* Packages Section */
 .package_card{
     -fx-font-family: 'Lato';
-    -fx-background-color: white;
+    -fx-background-color:  #f9f9f9;
     -fx-background-radius: 10px;
     -fx-padding:  20px;
-    -fx-cursor: hand;
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.25), 10, 0, 0, 3);
     -fx-border-color: -fx-primary-color;
     -fx-border-radius:  6px;
-    -fx-border-width:  10px;
+    -fx-border-width:  6px;
+}
+.package_card_content{
+    -fx-background-color:  #fff;
+    -fx-background-radius: 5px;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5px;
+    -fx-border-width: 1px;
+
 }
 .package_card_title{
     -fx-font-size: 50px;
