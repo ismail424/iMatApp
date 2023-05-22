@@ -2,24 +2,32 @@ package com.imatapp.components;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
+import com.imatapp.PrimaryController;
+import com.imatapp.events.ShowPopupEvent;
 import com.imatapp.pages.Packages;
 
+import javafx.event.Event;
+import javafx.event.EventTarget;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
 
-public class PackageCard {
+public class PackageCard  {
     private PackageItem[] displayItems;
     private VBox card;
     private Button addToCart;
-    private Text totalPriceSumText, cardTitle, itemAmount, showall;
-    private IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
+    private Text totalPriceSumText, cardTitle, itemAmount,showall;
 
+
+    private IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
+    private VBox package_card_content;
+    
     public PackageCard(VBox card, String title, int price, Product[] displayItemsData) {
         this.card = card;
 
@@ -27,8 +35,10 @@ public class PackageCard {
         totalPriceSumText = (Text) card.lookup(".package_card_totalprice_sum");
         addToCart = (Button) card.lookup(".package_card_button");
         itemAmount = (Text) card.lookup(".package_card_item_amount");
+        package_card_content = (VBox) card.lookup(".package_card_content");
         showall = (Text) card.lookup(".package_card_showall");
-        cardTitle.setText(title);   
+        cardTitle.setText(title);
+
         displayItems = new PackageItem[displayItemsData.length];
 
         int i = 0;
@@ -41,6 +51,9 @@ public class PackageCard {
                 item.setVisible(false);
             }
         });
+
+        itemAmount.setText("+"+String.valueOf(displayItems.length) + " Varor Till");
+
         if (displayItems.length > 3) {
             itemAmount.setText("+"+String.valueOf(displayItems.length - 3) + " Varor Till");
         }
@@ -49,6 +62,17 @@ public class PackageCard {
             showall.setVisible(false);
         }
         totalPriceSumText.setText(String.valueOf(price) + " kr");
+        package_card_content.setOnMousePressed((MouseEvent event) -> {
+            InspectItems inspectItems = new InspectItems(displayItemsData);
+            Event.fireEvent(card, new ShowPopupEvent(inspectItems));
+        });
+
+        addToCart.setOnMousePressed((MouseEvent event) -> {
+            for (Product product : displayItemsData) {
+                iMatDataHandler.getShoppingCart().addProduct(product);
+            }
+        });
+
     }
 
 

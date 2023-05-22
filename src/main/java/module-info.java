@@ -12,4 +12,7 @@ module com.imatapp {
 
     opens com.imatapp.components to javafx.fxml;
     exports com.imatapp.components;
+
+    opens com.imatapp.events to javafx.fxml;
+    exports com.imatapp.events;
 } 

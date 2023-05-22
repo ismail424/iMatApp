@@ -15,6 +15,8 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane id="AnchorPane" minHeight="700.0" minWidth="1100.0" prefWidth="1228.0" style="-fx-background-color: #F3F3F3;" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.imatapp.PrimaryController">
     <children>
@@ -64,10 +66,30 @@
                                           <Insets />
                                        </HBox.margin>
                                     </Button>
-                                    <Button fx:id="shoppingcartButton" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="navbar_buttons" text="Varukorg" textOverrun="CLIP" HBox.hgrow="ALWAYS">
+                                    <Button fx:id="shoppingcartButton" alignment="CENTER" contentDisplay="RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="navbar_buttons" text="Varukorg" textOverrun="CLIP" HBox.hgrow="ALWAYS">
                                        <HBox.margin>
                                           <Insets />
                                        </HBox.margin>
+                                       <graphic>
+                                          <AnchorPane prefHeight="44.0" prefWidth="43.0">
+                                             <children>
+                                                <ImageView fitHeight="60.0" fitWidth="40.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <image>
+                                                      <Image url="@../images/shoppingcart_icon.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <AnchorPane style="-fx-background-color: #fff; -fx-background-radius: 20px;" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="-25.0" AnchorPane.topAnchor="-5.0">
+                                                   <children>
+                                                      <Text fx:id="shoppingCartItemsAmount" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="43.760000228881836" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="0.0">
+                                                         <font>
+                                                            <Font name="Lato Bold" size="22.0" />
+                                                         </font>
+                                                      </Text>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </AnchorPane>
+                                       </graphic>
                                     </Button>
                                  </children>
                                  <padding>
