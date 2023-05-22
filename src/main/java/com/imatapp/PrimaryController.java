@@ -17,8 +17,11 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.StackPane;
+import javafx.scene.text.Text;
 import javafx.util.Duration;
+import se.chalmers.cse.dat216.project.CartEvent;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
+import se.chalmers.cse.dat216.project.ShoppingCartListener;
 
 public class PrimaryController  {
     private IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
@@ -31,8 +34,8 @@ public class PrimaryController  {
     @FXML
     private StackPane mainStackPane;
 
-    @FXML
-    private TextField searchbar;
+    @FXML 
+    private Text shoppingCartItemsAmount;
 
     @FXML
     private  GridPane popup;
@@ -70,6 +73,13 @@ public class PrimaryController  {
                 if (event instanceof ShowPopupEvent) {
                     showPopup(((ShowPopupEvent) event).getAnchorPane());
                 }
+            }
+        });
+
+        iMatDataHandler.getShoppingCart().addShoppingCartListener( new ShoppingCartListener() {
+            @Override
+            public void shoppingCartChanged(CartEvent cartEvent) {
+                shoppingCartItemsAmount.setText(String.valueOf(iMatDataHandler.getShoppingCart().getItems().size()));
             }
         });
 

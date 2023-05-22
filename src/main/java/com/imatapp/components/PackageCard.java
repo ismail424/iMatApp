@@ -22,7 +22,7 @@ public class PackageCard  {
     private PackageItem[] displayItems;
     private VBox card;
     private Button addToCart;
-    private Text totalPriceSumText, cardTitle, itemAmount;
+    private Text totalPriceSumText, cardTitle, itemAmount,showall;
     private IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
     private VBox package_card_content;
     
@@ -34,7 +34,7 @@ public class PackageCard  {
         addToCart = (Button) card.lookup(".package_card_button");
         itemAmount = (Text) card.lookup(".package_card_item_amount");
         package_card_content = (VBox) card.lookup(".package_card_content");
-
+        showall = (Text) card.lookup(".package_card_showall");
         cardTitle.setText(title);
         displayItems = new PackageItem[displayItemsData.length];
 
@@ -42,15 +42,33 @@ public class PackageCard  {
         AtomicInteger index = new AtomicInteger(i);
         card.lookupAll(".package_card_item").forEach(item -> {
             int currentIndex = index.getAndIncrement();
-            displayItems[currentIndex] = new PackageItem((HBox) item, displayItemsData[currentIndex]);
+            try {
+                displayItems[currentIndex] = new PackageItem((HBox) item, displayItemsData[currentIndex]);
+            } catch (IndexOutOfBoundsException e) {
+                item.setVisible(false);
+            }
         });
 
         itemAmount.setText("+"+String.valueOf(displayItems.length) + " Varor Till");
+        if (displayItems.length > 3) {
+            itemAmount.setText("+"+String.valueOf(displayItems.length - 3) + " Varor Till");
+        }
+        else {
+            itemAmount.setVisible(false);
+            showall.setVisible(false);
+        }
         totalPriceSumText.setText(String.valueOf(price) + " kr");
         package_card_content.setOnMousePressed((MouseEvent event) -> {
             InspectItems inspectItems = new InspectItems(displayItemsData);
             Event.fireEvent(card, new ShowPopupEvent(inspectItems));
         });
+
+        addToCart.setOnMousePressed((MouseEvent event) -> {
+            for (Product product : displayItemsData) {
+                iMatDataHandler.getShoppingCart().addProduct(product);
+            }
+        });
+
     }
 
 
