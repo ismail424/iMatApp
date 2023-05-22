@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<fx:root maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="500.0" prefWidth="700.0" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="productImage" fitHeight="121.0" fitWidth="148.0" layoutX="24.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="24.0" AnchorPane.topAnchor="20.0">
+         <image>
+            <Image url="@../../images/apple.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="productTitle" layoutX="192.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Titel" AnchorPane.leftAnchor="190.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font name="Lato Bold" size="30.0" />
+         </font>
+      </Text>
+      <Text fx:id="productAmount" layoutX="193.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Antal: 1" AnchorPane.leftAnchor="190.0" AnchorPane.topAnchor="82.0">
+         <font>
+            <Font name="Lato Regular" size="21.0" />
+         </font>
+      </Text>
+      <Text fx:id="productPriceUnit" layoutX="193.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pris: 19kr/kg" AnchorPane.leftAnchor="190.0" AnchorPane.topAnchor="55.0">
+         <font>
+            <Font name="Lato Regular" size="21.0" />
+         </font>
+      </Text>
+      <Text fx:id="productPrice" layoutX="752.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10kr" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <font>
+            <Font name="Lato Bold" size="31.0" />
+         </font>
+      </Text>
+   </children>
+</fx:root>

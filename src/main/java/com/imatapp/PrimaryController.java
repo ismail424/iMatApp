@@ -3,8 +3,12 @@ package com.imatapp;
 
 import java.io.IOException;
 
+import com.imatapp.components.InspectItems;
+import com.imatapp.events.ShowPopupEvent;
 import com.imatapp.components.NavigationButton;
 import javafx.animation.FadeTransition;
+import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
@@ -31,13 +35,16 @@ public class PrimaryController  {
     private TextField searchbar;
 
     @FXML
-    private GridPane popup;
+    private  GridPane popup;
 
     @FXML
-    private BorderPane allContent;
+    private  BorderPane allContent;
 
     @FXML
-    private AnchorPane packagesPane, allproductsPane, shoppingcartPane, accountPane, popupContent;
+    private AnchorPane packagesPane, allproductsPane, shoppingcartPane, accountPane;
+
+    @FXML
+    private  AnchorPane popupContent;
 
     private AnchorPane currentShowingPane;
 
@@ -56,16 +63,32 @@ public class PrimaryController  {
         popupButton.setOnAction( e -> {
             hidePopup();
         });
+        
+        mainStackPane.addEventHandler(Event.ANY, new EventHandler<Event>() {
+            @Override
+            public void handle(Event event) {
+                if (event instanceof ShowPopupEvent) {
+                    showPopup(((ShowPopupEvent) event).getAnchorPane());
+                }
+            }
+        });
 
     }   
-    public void showPopup(AnchorPane content){
-        System.out.println("Showing popup");
+    // any element can be accpeted as a parameter
+    public void showPopup( AnchorPane  content ){
         popup.toFront();
         popup.setVisible(true);
         allContent.toBack();
-
         popupContent.getChildren().clear();
         popupContent.getChildren().add(content);
+        // Ancher it to all sides
+        AnchorPane.setTopAnchor(content, 0.0);
+        AnchorPane.setBottomAnchor(content, 0.0);
+        AnchorPane.setLeftAnchor(content, 0.0);
+        AnchorPane.setRightAnchor(content, 0.0);
+        
+        popupContent.toFront();
+
     }
 
     public void hidePopup(){
@@ -93,4 +116,5 @@ public class PrimaryController  {
         ftShow.setToValue(1.0);
         ftShow.play();
     }
+
 }
