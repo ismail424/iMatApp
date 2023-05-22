@@ -1,15 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="1000.0" stylesheets="@../../styles/AllProducts.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.imatapp.pages.AllProducts">
    <children>
-      <Text layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alla varor" textAlignment="CENTER">
-         <font>
-            <Font size="42.0" />
-         </font>
-      </Text>
+      <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane HBox.hgrow="ALWAYS">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="371.0" layoutX="6.0" layoutY="9.0" stroke="#b1b1b1" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" width="160.0" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="8.0" />
+                  <Label id="allproducts_categories_text" layoutX="16.0" layoutY="14.0" prefHeight="34.0" prefWidth="140.0" text="Kategorier">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label id="allproducts_under_categories_text" layoutX="28.0" layoutY="74.0" prefHeight="23.0" prefWidth="131.0" text="Frukt" textFill="#53b175" />
+                  <Label id="allproducts_under_categories_text" layoutX="28.0" layoutY="112.0" prefHeight="23.0" prefWidth="131.0" text="Pasta" />
+                  <Label id="allproducts_under_categories_text" layoutX="28.0" layoutY="149.0" prefHeight="23.0" prefWidth="131.0" text="Chips &amp; Godis" />
+                  <Label id="allproducts_under_categories_text" layoutX="28.0" layoutY="187.0" prefHeight="23.0" prefWidth="131.0" text="Glass" />
+                  <Label id="allproducts_under_categories_text" layoutX="28.0" layoutY="224.0" prefHeight="23.0" prefWidth="131.0" text="Erbjudande" />
+               </children>
+            </AnchorPane>
+            <AnchorPane HBox.hgrow="ALWAYS">
+               <children>
+                  <AnchorPane layoutX="9.0" layoutY="13.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <children>
+                        <TextField id="allproducts_search_box" fx:id="SearchBar" prefHeight="42.0" promptText="Sök efter produkter" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                        <Button layoutX="376.0" layoutY="4.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="25.0" style="-fx-background-color: tansparent;" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/search_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <ScrollPane layoutX="8.0" layoutY="61.0" prefHeight="326.0" prefWidth="418.0" AnchorPane.bottomAnchor="0.6000000000000227" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="61.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="326.0" prefWidth="418.0" />
+                    </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
    </children>
-</Pane>
+</AnchorPane>
