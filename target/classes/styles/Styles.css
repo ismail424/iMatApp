@@ -128,3 +128,15 @@
     -fx-font-weight: 400;
 
 }
+
+
+.package_popup_addtocart{
+    -fx-text-fill: #fff;
+    -fx-font-size: 30px;
+    -fx-font-weight: 600;
+    -fx-font-family: 'Lato';
+    -fx-background-color: #333333;
+    -fx-background-radius: 40px;
+    -fx-min-height: 0px;
+    -fx-min-width: 300px;
+}
