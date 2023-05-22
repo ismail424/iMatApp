@@ -23,6 +23,8 @@ public class PackageCard  {
     private VBox card;
     private Button addToCart;
     private Text totalPriceSumText, cardTitle, itemAmount,showall;
+
+
     private IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
     private VBox package_card_content;
     
@@ -36,6 +38,7 @@ public class PackageCard  {
         package_card_content = (VBox) card.lookup(".package_card_content");
         showall = (Text) card.lookup(".package_card_showall");
         cardTitle.setText(title);
+
         displayItems = new PackageItem[displayItemsData.length];
 
         int i = 0;
@@ -50,6 +53,7 @@ public class PackageCard  {
         });
 
         itemAmount.setText("+"+String.valueOf(displayItems.length) + " Varor Till");
+
         if (displayItems.length > 3) {
             itemAmount.setText("+"+String.valueOf(displayItems.length - 3) + " Varor Till");
         }
