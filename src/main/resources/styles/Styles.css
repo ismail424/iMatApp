@@ -276,3 +276,107 @@
     -fx-font-size: 30px;
     -fx-text-fill: #3D3D3D;
 }
+
+
+.allproducts_categories_title{
+    -fx-font-family: 'Lato';
+    -fx-alignment: left;
+    -fx-font-size: 30px;
+    -fx-font-family: 'Lato';
+    -fx-font-weight: 800;
+}
+.allproducts_categories_text{
+    -fx-font-family: 'Lato';
+    -fx-text-fill: #333;
+    -fx-alignment: left;
+    -fx-font-size: 25px;
+    -fx-font-family: 'Lato';
+    -fx-font-weight: 500;
+    -fx-cursor: hand;
+}
+.allproducts_categories_text:hover{
+    -fx-text-fill: #53b175;
+}
+
+.active_text{
+    -fx-text-fill: #53b175;
+    -fx-font-weight: 800;
+}
+
+.all_products{
+    -fx-background-color: transparent;
+}
+
+
+.navbar_search_box{
+    -fx-background-image:url('../images/search_icon.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 27px 27px;
+    -fx-background-position: 98%;
+    -fx-background-radius: 15px;
+    -fx-font-family: 'Lato';
+    -fx-alignment: left;
+    -fx-font-size: 32px;
+    -fx-font-family: 'Lato';
+    -fx-font-weight: 600;
+    -fx-padding: 5 10 5 30;
+    -fx-border-width: 0;
+    -fx-prompt-text-fill: #444444;
+}
+
+
+.product_card{
+    -fx-background-color: #fff;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.25), 10, 0, 0, 3);
+}
+
+.product_card_text{
+    -fx-font-family: 'Lato';
+    -fx-font-weight: 600;
+    -fx-text-fill:  #3D3D3D; 
+    -fx-font-size: 45px;  
+}
+
+.product_card_price{
+    -fx-font-family: 'Lato';
+    -fx-font-weight: 800;
+    -fx-font-size: 40px;
+    -fx-fill: #53b175;
+
+}
+
+.product_card_price_decimal{
+    -fx-font-family: 'Lato';
+    -fx-font-weight: 800;
+    -fx-font-size: 30px;
+    -fx-fill: #53b175;
+}
+
+.product_card_amount{
+    -fx-font-family: 'Lato';
+    -fx-font-weight: 800;
+    -fx-font-size: 30px;
+    -fx-fill: #333;
+}
+
+.product_card_addbutton{
+    -fx-font-family: 'Lato';
+    -fx-font-weight: 800;
+    -fx-font-size: 20px;
+    -fx-fill: #fff;
+    -fx-text-fill: #fff;
+    -fx-background-color: #53b175;
+    -fx-background-radius: 10px;
+    -fx-cursor: hand;
+}
+.product_card_addbutton:hover{
+    -fx-background-color: #53b175;
+    -fx-scale-x: 1.04;
+    -fx-scale-y: 1.04;
+}
+.product_card_addbutton:pressed{
+    -fx-background-color: #53b175;
+    -fx-scale-x: 0.9;
+    -fx-scale-y: 0.9;
+}
