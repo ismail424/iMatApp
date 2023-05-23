@@ -1,10 +1,13 @@
 package com.imatapp;
 
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
+import se.chalmers.cse.dat216.project.IMatDataHandler;
 
 import java.io.IOException;
 
@@ -29,6 +32,12 @@ public class MainApp extends Application {
         stage.minWidthProperty().setValue(1100);
         stage.minHeightProperty().setValue(950);
         stage.show();
+        stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            @Override
+            public void handle(WindowEvent event) {
+                IMatDataHandler.getInstance().shutDown();
+            }
+        }); 
     }
 
     private static Parent loadFXML(String fxml) throws IOException {
@@ -40,5 +49,7 @@ public class MainApp extends Application {
     public static void main(String[] args) {
         launch(args);
     }
+
+
 
 }

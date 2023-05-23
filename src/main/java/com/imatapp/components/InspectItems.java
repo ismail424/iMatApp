@@ -28,8 +28,6 @@ public class InspectItems extends AnchorPane {
             }   
             mainVbox.setSpacing(6);
 
-
-
         } catch (IOException exception) {
             System.out.println("Error loading inspect_items.fxml");
             throw new RuntimeException(exception);

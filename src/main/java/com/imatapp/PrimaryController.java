@@ -3,16 +3,14 @@ package com.imatapp;
 
 import java.io.IOException;
 
-import com.imatapp.components.InspectItems;
 import com.imatapp.events.ShowPopupEvent;
+import com.imatapp.events.SwitchPageEvent;
 import com.imatapp.components.NavigationButton;
 import javafx.animation.FadeTransition;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
@@ -22,6 +20,7 @@ import javafx.util.Duration;
 import se.chalmers.cse.dat216.project.CartEvent;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.ShoppingCartListener;
+
 
 public class PrimaryController  {
     private IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
@@ -44,7 +43,7 @@ public class PrimaryController  {
     private  BorderPane allContent;
 
     @FXML
-    private AnchorPane packagesPane, allproductsPane, shoppingcartPane, accountPane;
+    private AnchorPane packagesPane, allproductsPane, shoppingcartPane, accountPane, historyPane;
 
     @FXML
     private  AnchorPane popupContent;
@@ -73,8 +72,24 @@ public class PrimaryController  {
                 if (event instanceof ShowPopupEvent) {
                     showPopup(((ShowPopupEvent) event).getAnchorPane());
                 }
+                if (event instanceof SwitchPageEvent) {
+                    SwitchPageEvent switchPageEvent = (SwitchPageEvent) event;
+                    String destinationPage = switchPageEvent.getDestinationPage();        
+                    if (destinationPage == "History"){
+                        switchPage(historyPane);
+                        return;
+                    }
+                    if (destinationPage == "Account"){
+                        switchPage(accountPane);
+                        return;
+                    }
+                }
             }
         });
+
+        if (iMatDataHandler.getShoppingCart().getItems().size() > 0){
+            shoppingCartItemsAmount.setText(String.valueOf(iMatDataHandler.getShoppingCart().getItems().size()));
+        }
 
         iMatDataHandler.getShoppingCart().addShoppingCartListener( new ShoppingCartListener() {
             @Override
@@ -86,6 +101,7 @@ public class PrimaryController  {
     }   
     // any element can be accpeted as a parameter
     public void showPopup( AnchorPane  content ){
+        
         popup.toFront();
         popup.setVisible(true);
         allContent.toBack();
@@ -97,8 +113,12 @@ public class PrimaryController  {
         AnchorPane.setLeftAnchor(content, 0.0);
         AnchorPane.setRightAnchor(content, 0.0);
         
+        FadeTransition ftShow = new FadeTransition( Duration.millis(500), popupContent);
+        ftShow.setFromValue(0.0);
+        ftShow.setToValue(1.0);
+        ftShow.play();
+        
         popupContent.toFront();
-
     }
 
     public void hidePopup(){

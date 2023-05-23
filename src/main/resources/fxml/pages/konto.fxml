@@ -1,16 +1,208 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.Pane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1300.0" minWidth="800.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.imatapp.pages.Account">
    <children>
-      <Text layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Konto" textAlignment="CENTER">
+      <Text fill="#313131" strokeType="OUTSIDE" strokeWidth="0.0" text="Historik">
          <font>
-            <Font size="42.0" />
+            <Font name="Lato Bold" size="40.0" />
          </font>
       </Text>
+      <Separator prefWidth="200.0" />
+      <GridPane>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints minWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Text fill="#313131" strokeType="OUTSIDE" strokeWidth="0.0" text="Här kan du se dina tidigare köp">
+               <font>
+                  <Font name="Lato Regular" size="30.0" />
+               </font>
+            </Text>
+            <Button fx:id="historyButton" mnemonicParsing="false" styleClass="account_your_orders_button" text="Dina betällningar" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Lato Regular" size="23.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets top="30.0" />
+         </VBox.margin>
+      </GridPane>
+      <Text fill="#313131" strokeType="OUTSIDE" strokeWidth="0.0" text="Mina Uppgifter">
+         <font>
+            <Font name="Lato Bold" size="40.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="30.0" />
+         </VBox.margin>
+      </Text>
+      <Separator prefWidth="200.0" />
+      <GridPane hgap="5.0" prefHeight="50.0" vgap="5.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="40.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="134.0" minHeight="10.0" prefHeight="79.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Text fill="#313131" strokeType="OUTSIDE" strokeWidth="0.0" text="Namn:" GridPane.halignment="RIGHT">
+               <font>
+                  <Font name="Lato Regular" size="32.0" />
+               </font>
+            </Text>
+            <TextField fx:id="nameField" maxHeight="-Infinity" maxWidth="400.0" prefHeight="30.0" promptText="Namn" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Lato Regular" size="23.0" />
+               </font>
+            </TextField>
+         </children>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </GridPane>
+      <GridPane hgap="5.0" prefHeight="50.0" vgap="5.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="40.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="134.0" minHeight="10.0" prefHeight="79.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Text fill="#313131" strokeType="OUTSIDE" strokeWidth="0.0" text="Efternamn:" GridPane.halignment="RIGHT">
+               <font>
+                  <Font name="Lato Regular" size="32.0" />
+               </font>
+            </Text>
+            <TextField fx:id="lastNameField" maxHeight="-Infinity" maxWidth="400.0" prefHeight="30.0" promptText="Efternamn" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Lato Regular" size="23.0" />
+               </font>
+            </TextField>
+         </children>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </GridPane>
+      <GridPane hgap="5.0" prefHeight="50.0" vgap="5.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="40.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="134.0" minHeight="10.0" prefHeight="79.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Text fill="#313131" strokeType="OUTSIDE" strokeWidth="0.0" text="E-Post:" GridPane.halignment="RIGHT">
+               <font>
+                  <Font name="Lato Regular" size="32.0" />
+               </font>
+            </Text>
+            <TextField fx:id="emailField" maxHeight="-Infinity" maxWidth="400.0" prefHeight="30.0" promptText="E-post" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Lato Regular" size="23.0" />
+               </font>
+            </TextField>
+         </children>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </GridPane>
+      <GridPane hgap="5.0" prefHeight="50.0" vgap="5.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="40.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="134.0" minHeight="10.0" prefHeight="79.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Text fill="#313131" strokeType="OUTSIDE" strokeWidth="0.0" text="Mobilnummer:" GridPane.halignment="RIGHT">
+               <font>
+                  <Font name="Lato Regular" size="32.0" />
+               </font>
+            </Text>
+            <TextField fx:id="phoneNumberField" maxHeight="-Infinity" maxWidth="400.0" prefHeight="30.0" promptText="Telefonnummer" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Lato Regular" size="23.0" />
+               </font>
+            </TextField>
+         </children>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </GridPane>
+      <GridPane hgap="5.0" prefHeight="50.0" vgap="5.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="40.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="134.0" minHeight="10.0" prefHeight="79.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Text fill="#313131" strokeType="OUTSIDE" strokeWidth="0.0" text="Adress:" GridPane.halignment="RIGHT">
+               <font>
+                  <Font name="Lato Regular" size="32.0" />
+               </font>
+            </Text>
+            <TextField fx:id="addressField" maxHeight="-Infinity" maxWidth="400.0" prefHeight="30.0" promptText="Adress" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Lato Regular" size="23.0" />
+               </font>
+            </TextField>
+         </children>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </GridPane>
+      <GridPane hgap="5.0" prefHeight="50.0" vgap="5.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="40.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="134.0" minHeight="10.0" prefHeight="79.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Text fill="#313131" strokeType="OUTSIDE" strokeWidth="0.0" text="Postkod:" GridPane.halignment="RIGHT">
+               <font>
+                  <Font name="Lato Regular" size="32.0" />
+               </font>
+            </Text>
+            <TextField fx:id="postCodeField" maxHeight="-Infinity" maxWidth="400.0" prefHeight="30.0" promptText="Postkod" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Lato Regular" size="23.0" />
+               </font>
+            </TextField>
+         </children>
+         <VBox.margin>
+            <Insets bottom="30.0" top="10.0" />
+         </VBox.margin>
+      </GridPane>
    </children>
-</Pane>
+   <padding>
+      <Insets left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
