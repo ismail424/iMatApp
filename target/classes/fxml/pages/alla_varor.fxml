@@ -4,21 +4,24 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="1000.0" stylesheets="@../../styles/AllProducts.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.imatapp.pages.AllProducts">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../../styles/AllProducts.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.imatapp.pages.AllProducts">
    <children>
-      <HBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <HBox prefHeight="402.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <AnchorPane HBox.hgrow="ALWAYS">
+            <AnchorPane prefHeight="296.0" prefWidth="198.0">
                <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="371.0" layoutX="6.0" layoutY="9.0" stroke="#b1b1b1" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" width="160.0" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="8.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="371.0" layoutX="6.0" layoutY="9.0" stroke="#b1b1b1" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" width="160.0" />
                   <Label id="allproducts_categories_text" layoutX="16.0" layoutY="14.0" prefHeight="34.0" prefWidth="140.0" text="Kategorier">
                      <font>
                         <Font size="16.0" />
@@ -31,12 +34,12 @@
                   <Label id="allproducts_under_categories_text" layoutX="28.0" layoutY="224.0" prefHeight="23.0" prefWidth="131.0" text="Erbjudande" />
                </children>
             </AnchorPane>
-            <AnchorPane HBox.hgrow="ALWAYS">
+            <AnchorPane prefHeight="402.0" prefWidth="482.0" HBox.hgrow="ALWAYS">
                <children>
-                  <AnchorPane layoutX="9.0" layoutY="13.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                  <AnchorPane layoutX="9.0" layoutY="13.0">
                      <children>
-                        <TextField id="allproducts_search_box" fx:id="SearchBar" prefHeight="42.0" promptText="Sök efter produkter" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                        <Button layoutX="376.0" layoutY="4.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="25.0" style="-fx-background-color: tansparent;" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                        <TextField id="allproducts_search_box" fx:id="SearchBar" prefHeight="42.0" prefWidth="417.0" promptText="Sök efter produkter" />
+                        <Button layoutX="376.0" layoutY="4.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="25.0" style="-fx-background-color: tansparent;">
                            <graphic>
                               <ImageView fitHeight="25.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -47,9 +50,200 @@
                         </Button>
                      </children>
                   </AnchorPane>
-                  <ScrollPane layoutX="8.0" layoutY="61.0" prefHeight="326.0" prefWidth="418.0" AnchorPane.bottomAnchor="0.6000000000000227" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="61.0">
+                  <ScrollPane layoutX="8.0" layoutY="61.0" prefHeight="326.0" prefWidth="418.0">
                     <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="326.0" prefWidth="418.0" />
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="326.0" prefWidth="418.0">
+                           <children>
+                              <Pane layoutX="14.0" layoutY="14.0" prefHeight="130.0" prefWidth="130.0">
+                                 <children>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="130.0" stroke="#cccccc" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" width="130.0" />
+                                    <Button layoutX="14.0" layoutY="89.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="29.0" style="-fx-background-color: tansparent;">
+                                       <graphic>
+                                          <ImageView fitHeight="27.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../images/Minus.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button layoutX="70.0" layoutY="89.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="29.0" style="-fx-background-color: tansparent;">
+                                       <graphic>
+                                          <ImageView fitHeight="27.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../images/Plus.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <ImageView fitHeight="42.0" fitWidth="83.0" layoutX="30.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../images/apple.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text id="text" layoutX="32.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Äpplen" textAlignment="CENTER" wrappingWidth="65.33672714233398">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <Text id="text" fill="#53b175" layoutX="70.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="99" />
+                                    <Text fill="#5b5b5b" layoutX="61.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />
+                                    <Text id="text" fill="#53b175" layoutX="45.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="19" wrappingWidth="24.00002441406241">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <effect>
+                                    <DropShadow height="4.67" radius="4.762499999999999" width="16.38">
+                                       <color>
+                                          <Color red="0.800000011920929" green="0.800000011920929" blue="0.800000011920929" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </Pane>
+                              <Pane layoutX="163.0" layoutY="14.0" prefHeight="130.0" prefWidth="130.0">
+                                 <children>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="130.0" stroke="#cccccc" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" width="130.0" />
+                                    <Button layoutX="14.0" layoutY="89.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="29.0" style="-fx-background-color: tansparent;">
+                                       <graphic>
+                                          <ImageView fitHeight="27.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../images/Minus.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button layoutX="70.0" layoutY="89.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="29.0" style="-fx-background-color: tansparent;">
+                                       <graphic>
+                                          <ImageView fitHeight="27.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../images/Plus.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <ImageView fitHeight="42.0" fitWidth="83.0" layoutX="30.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../images/apple.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text id="text" layoutX="32.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Äpplen" textAlignment="CENTER" wrappingWidth="65.33672714233398">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <Text id="text" fill="#53b175" layoutX="70.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="99" />
+                                    <Text fill="#5b5b5b" layoutX="61.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />
+                                    <Text id="text" fill="#53b175" layoutX="45.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="19" wrappingWidth="24.00002441406241">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <effect>
+                                    <DropShadow height="4.67" radius="4.762499999999999" width="16.38">
+                                       <color>
+                                          <Color red="0.800000011920929" green="0.800000011920929" blue="0.800000011920929" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </Pane>
+                              <Pane layoutX="14.0" layoutY="163.0" prefHeight="130.0" prefWidth="130.0">
+                                 <children>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="130.0" stroke="#cccccc" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" width="130.0" />
+                                    <Button layoutX="14.0" layoutY="89.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="29.0" style="-fx-background-color: tansparent;">
+                                       <graphic>
+                                          <ImageView fitHeight="27.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../images/Minus.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button layoutX="70.0" layoutY="89.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="29.0" style="-fx-background-color: tansparent;">
+                                       <graphic>
+                                          <ImageView fitHeight="27.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../images/Plus.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <ImageView fitHeight="42.0" fitWidth="83.0" layoutX="30.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../images/apple.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text id="text" layoutX="32.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Äpplen" textAlignment="CENTER" wrappingWidth="65.33672714233398">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <Text id="text" fill="#53b175" layoutX="70.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="99" />
+                                    <Text fill="#5b5b5b" layoutX="61.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />
+                                    <Text id="text" fill="#53b175" layoutX="45.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="19" wrappingWidth="24.00002441406241">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <effect>
+                                    <DropShadow height="4.67" radius="4.762499999999999" width="16.38">
+                                       <color>
+                                          <Color red="0.800000011920929" green="0.800000011920929" blue="0.800000011920929" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </Pane>
+                              <Pane layoutX="163.0" layoutY="163.0" prefHeight="130.0" prefWidth="130.0">
+                                 <children>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="130.0" stroke="#cccccc" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" width="130.0" />
+                                    <Button layoutX="14.0" layoutY="89.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="29.0" style="-fx-background-color: tansparent;">
+                                       <graphic>
+                                          <ImageView fitHeight="27.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../images/Minus.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button layoutX="70.0" layoutY="89.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="29.0" style="-fx-background-color: tansparent;">
+                                       <graphic>
+                                          <ImageView fitHeight="27.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../images/Plus.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <ImageView fitHeight="42.0" fitWidth="83.0" layoutX="30.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../images/apple.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text id="text" layoutX="32.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Äpplen" textAlignment="CENTER" wrappingWidth="65.33672714233398">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                    <Text id="text" fill="#53b175" layoutX="70.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="99" />
+                                    <Text fill="#5b5b5b" layoutX="61.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />
+                                    <Text id="text" fill="#53b175" layoutX="45.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="19" wrappingWidth="24.00002441406241">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                                 <effect>
+                                    <DropShadow height="4.67" radius="4.762499999999999" width="16.38">
+                                       <color>
+                                          <Color red="0.800000011920929" green="0.800000011920929" blue="0.800000011920929" />
+                                       </color>
+                                    </DropShadow>
+                                 </effect>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
                     </content>
                   </ScrollPane>
                </children>

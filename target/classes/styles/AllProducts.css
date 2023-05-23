@@ -33,3 +33,11 @@
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.25), 10, 0, 0, 3);
     -fx-background-radius: 10px;
 }
+#text{
+    -fx-font-family: 'Lato';
+    -fx-font-weight: 700;
+}
+#total_pris_text{
+    -fx-font-family: 'Lato';
+    -fx-font-weight: 650;
+}
