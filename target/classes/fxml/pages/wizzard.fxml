@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Text?>
+
+<StackPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.imatapp.pages.Wizzard">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="960.0" minWidth="650.0" prefHeight="960.0" prefWidth="1100.0">
+         <children>
+            <HBox fx:id="stepper" alignment="CENTER">
+               <children>
+                  <Button fx:id="uppgifterStep" mnemonicParsing="false" text="Uppgifter">
+                     <styleClass>
+                        <String fx:value="wizzard_stepper_button" />
+                        <String fx:value="wizzard_stepper_curent" />
+                     </styleClass>
+                  </Button>
+                  <Line fx:id="leveransLine" endX="70.0" styleClass="wizzard_stepper_line" />
+                  <Button fx:id="leveransStep" mnemonicParsing="false" styleClass="wizzard_stepper_button" text="   TID   " />
+                  <Line fx:id="betalningLine" endX="70.0" styleClass="wizzard_stepper_line" />
+                  <Button fx:id="betalningStep" mnemonicParsing="false" styleClass="wizzard_stepper_button" text="Betala" />
+                  <Line fx:id="overviewLine" endX="70.0" styleClass="wizzard_stepper_line" />
+                  <Button fx:id="overviewStep" mnemonicParsing="false" styleClass="wizzard_stepper_button" text="Översikt" />
+               </children>
+            </HBox>
+            <StackPane fx:id="stepPane" prefHeight="150.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+               <children>
+                  <BorderPane fx:id="uppgifterPane" prefHeight="200.0" prefWidth="200.0">
+                     <padding>
+                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                     </padding>
+                     <top>
+                        <VBox spacing="10.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_title" text="Fyll i dina uppgifter" />
+                              <Separator prefWidth="200.0" />
+                           </children>
+                        </VBox>
+                     </top>
+                     <center>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_input_label" text="Namn" />
+                              <TextField fx:id="firstNameField" promptText="Namn" styleClass="wizzard_input_label" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_input_label" text="Efternamn:">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <TextField fx:id="lastNameField" promptText="Efternamn" styleClass="wizzard_input_label" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_input_label" text="Telefonnummer:">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <TextField fx:id="phoneNumberField" promptText="Telefonnummer" styleClass="wizzard_input_label" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_input_label" text="E-post:">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <TextField fx:id="emailField" promptText="E-post" styleClass="wizzard_input_label" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_input_label" text="Adress:">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <TextField fx:id="addressField" promptText="Adress" styleClass="wizzard_input_label" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_input_label" text="Postnummer">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <TextField fx:id="postCodeField" promptText="Postnummer" styleClass="wizzard_input_label" />
+                           </children>
+                           <BorderPane.margin>
+                              <Insets top="10.0" />
+                           </BorderPane.margin>
+                        </VBox>
+                     </center>
+                  </BorderPane>
+                  <BorderPane fx:id="leveransPane" prefHeight="200.0" prefWidth="200.0" visible="false">
+                     <padding>
+                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                     </padding>
+                     <top>
+                        <VBox spacing="10.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_title" text="Välj tid" />
+                              <Separator prefWidth="200.0" />
+                           </children>
+                        </VBox>
+                     </top>
+                     <center>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" BorderPane.alignment="CENTER">
+                           <BorderPane.margin>
+                              <Insets top="10.0" />
+                           </BorderPane.margin>
+                           <children>
+                              <VBox fx:id="vboxTimePick" spacing="10.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <BorderPane fx:id="todayDate" prefHeight="200.0" prefWidth="200.0" styleClass="wizzard_date_card">
+                                             <center>
+                                                <Text fx:id="todayDateText" strokeType="OUTSIDE" strokeWidth="0.0" text="23 Maj" BorderPane.alignment="CENTER" />
+                                             </center>
+                                             <HBox.margin>
+                                                <Insets right="30.0" />
+                                             </HBox.margin>
+                                          </BorderPane>
+                                          <BorderPane fx:id="tomorrowDate" prefHeight="200.0" prefWidth="200.0">
+                                             <center>
+                                                <Text fx:id="tomorrowDateText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_date_card_active" text="24 Maj" BorderPane.alignment="CENTER" />
+                                             </center>
+                                             <HBox.margin>
+                                                <Insets right="30.0" />
+                                             </HBox.margin>
+                                             <styleClass>
+                                                <String fx:value="wizzard_date_card" />
+                                                <String fx:value="wizzard_date_card_active" />
+                                             </styleClass>
+                                          </BorderPane>
+                                          <BorderPane fx:id="twoDaysDate" prefHeight="200.0" prefWidth="200.0" styleClass="wizzard_date_card">
+                                             <center>
+                                                <Text fx:id="twoDaysDateText" strokeType="OUTSIDE" strokeWidth="0.0" text="25 Maj" BorderPane.alignment="CENTER" />
+                                             </center>
+                                             <HBox.margin>
+                                                <Insets right="30.0" />
+                                             </HBox.margin>
+                                          </BorderPane>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="30.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <CheckBox mnemonicParsing="false" styleClass="wizzard_time_checkbox" text="8:30 - 10:00" />
+                                    <CheckBox mnemonicParsing="false" styleClass="wizzard_time_checkbox" text="10:30 - 12:00" />
+                                    <CheckBox mnemonicParsing="false" selected="true" styleClass="wizzard_time_checkbox" text="12:30 - 15:00" />
+                                    <CheckBox mnemonicParsing="false" styleClass="wizzard_time_checkbox" text="15:00 - 18:00" />
+                                    <CheckBox mnemonicParsing="false" styleClass="wizzard_time_checkbox" text="18:00 - 20:00" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </center>
+                  </BorderPane>
+                  <BorderPane fx:id="betalningPane" prefHeight="200.0" prefWidth="200.0" visible="false">
+                     <padding>
+                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                     </padding>
+                     <top>
+                        <VBox spacing="10.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_title" text="Betalning" />
+                              <Separator prefWidth="200.0" />
+                           </children>
+                        </VBox>
+                     </top>
+                     <center>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_input_label" text="Namn på kortet" />
+                              <TextField fx:id="nameOnCard" maxWidth="585.0" promptText="Namn på kortet" styleClass="wizzard_input_label" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_input_label" text="Kortnummer:">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                 <children>
+                                    <TextField fx:id="cardNumber" maxWidth="585.0" promptText="Kortnummer" styleClass="wizzard_input_label" HBox.hgrow="ALWAYS" />
+                                    <ImageView fitHeight="31.0" fitWidth="69.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../images/Visa_Logo%201.png" />
+                                       </image>
+                                    </ImageView>
+                                    <ImageView fitHeight="32.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../images/mastercard.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_input_label" text="Utgångsår:" HBox.hgrow="ALWAYS" />
+                                    <TextField fx:id="cardYear" maxWidth="150.0" promptText="Utgångsår" styleClass="wizzard_input_label" HBox.hgrow="ALWAYS" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_input_label" text="Utgångsmånad:" />
+                                    <TextField fx:id="cardMonth" maxWidth="200.0" promptText="Utgångsmånad" styleClass="wizzard_input_label" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_input_label" text="CVC:" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets left="30.0" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <TextField fx:id="cardCVC" maxWidth="100.0" promptText="CVC" styleClass="wizzard_input_label" HBox.hgrow="ALWAYS" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets top="10.0" />
+                           </BorderPane.margin>
+                        </VBox>
+                     </center>
+                  </BorderPane>
+                  <BorderPane fx:id="overviewPane" prefHeight="200.0" prefWidth="200.0" visible="false">
+                     <padding>
+                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                     </padding>
+                     <top>
+                        <VBox spacing="10.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_title" text="Översikt" />
+                              <Separator prefWidth="200.0" />
+                           </children>
+                        </VBox>
+                     </top>
+                     <center>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_overview_title" text="Information" />
+                              <Text fx:id="orderNmr" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_overview" text="Order nummer: 1" />
+                              <Text fx:id="orderAmount" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_overview" text="Antal Varor: 10" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_overview" text="Kund nummer. 101230" />
+                              <Separator prefWidth="200.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_overview_title" text="Leverans Adress">
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </Text>
+                              <Text fx:id="orderName" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_overview" text="Jane Doe" />
+                              <Text fx:id="orderAdress" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_overview" text="3 Newbridge Court " />
+                              <Separator prefWidth="200.0" />
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_overview_title" text="Betalning metod" />
+                              <ImageView fitHeight="166.0" fitWidth="384.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../images/Payment.png" />
+                                 </image>
+                              </ImageView>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_overview_price_label" text="Total pris:" />
+                                    <Text fx:id="orderPrice" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_overview_price" text="500 kr" />
+                                 </children>
+                              </HBox>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets top="10.0" />
+                           </BorderPane.margin>
+                        </VBox>
+                     </center>
+                  </BorderPane>
+               </children>
+            </StackPane>
+            <BorderPane>
+               <left>
+                  <Button fx:id="stopStep" mnemonicParsing="false" styleClass="back_button" text="Avbryt" BorderPane.alignment="CENTER" />
+               </left>
+               <right>
+                  <HBox spacing="10.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button fx:id="previousStep" mnemonicParsing="false" styleClass="wizzard_previous_button" text="Tillbaka" visible="false" />
+                        <Button fx:id="nextStep" mnemonicParsing="false" styleClass="wizzard_next_button" text="Nästa" />
+                     </children>
+                  </HBox>
+               </right>
+            </BorderPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" />
+         </children>
+         <padding>
+            <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+         </padding>
+      </VBox>
+      <BorderPane fx:id="successPane" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <center>
+            <HBox alignment="CENTER" styleClass="wizzard_success" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="201.0" fitWidth="257.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/bags.png" />
+                     </image>
+                  </ImageView>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_success_text" text="Beställning genomförd!" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_success_text_small" text="Din beställning kommer att levereras i tid.&#10;Tack för att du valde vår app!" textAlignment="CENTER" />
+                        <Button fx:id="successButton" mnemonicParsing="false" styleClass="wizzard_success_button" text="Tillbaka hem">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </center>
+      </BorderPane>
+   </children>
+</StackPane>

@@ -5,6 +5,7 @@ import java.io.IOException;
 
 import com.imatapp.events.ShowPopupEvent;
 import com.imatapp.events.SwitchPageEvent;
+import com.imatapp.events.SwitchWizzardEvent;
 import com.imatapp.components.NavigationButton;
 import javafx.animation.FadeTransition;
 import javafx.event.Event;
@@ -46,6 +47,9 @@ public class PrimaryController  {
     private AnchorPane packagesPane, allproductsPane, shoppingcartPane, accountPane, historyPane;
 
     @FXML
+    private StackPane wizzardPane;
+
+    @FXML
     private  AnchorPane popupContent;
 
     private AnchorPane currentShowingPane;
@@ -66,26 +70,32 @@ public class PrimaryController  {
             hidePopup();
         });
         
-        mainStackPane.addEventHandler(Event.ANY, new EventHandler<Event>() {
-            @Override
-            public void handle(Event event) {
-                if (event instanceof ShowPopupEvent) {
-                    showPopup(((ShowPopupEvent) event).getAnchorPane());
+        mainStackPane.addEventHandler(Event.ANY, event -> {
+            System.out.println("Event: " + event.getEventType());
+            if (event instanceof ShowPopupEvent) {
+                showPopup(((ShowPopupEvent) event).getAnchorPane());
+            } else if (event instanceof SwitchPageEvent) {
+                SwitchPageEvent switchPageEvent = (SwitchPageEvent) event;
+                String destinationPage = switchPageEvent.getDestinationPage();
+                if (destinationPage.equals("History")) {
+                    switchPage(historyPane);
+                } else if (destinationPage.equals("Account")) {
+                    switchPage(accountPane);
+                } else if (destinationPage.equals("Varukorg")) {
+                    switchPage(shoppingcartPane);
                 }
-                if (event instanceof SwitchPageEvent) {
-                    SwitchPageEvent switchPageEvent = (SwitchPageEvent) event;
-                    String destinationPage = switchPageEvent.getDestinationPage();        
-                    if (destinationPage == "History"){
-                        switchPage(historyPane);
-                        return;
-                    }
-                    if (destinationPage == "Account"){
-                        switchPage(accountPane);
-                        return;
-                    }
+            } else if (event instanceof SwitchWizzardEvent) {
+                SwitchWizzardEvent switchWizzardEvent = (SwitchWizzardEvent) event;
+                boolean isEntering = switchWizzardEvent.isEntering();
+                if (isEntering) {
+                    enterWizzard();
+                } else {
+                    System.out.println("Exiting wizzard");
+                    exitWizzard();
                 }
             }
         });
+        
 
         if (iMatDataHandler.getShoppingCart().getItems().size() > 0){
             shoppingCartItemsAmount.setText(String.valueOf(iMatDataHandler.getShoppingCart().getItems().size()));
@@ -120,12 +130,43 @@ public class PrimaryController  {
         
         popupContent.toFront();
     }
-
     public void hidePopup(){
         allContent.toFront();
         popup.toBack();
         popup.setVisible(false);
     }
+
+    public void enterWizzard(){
+        
+        wizzardPane.toFront();
+        wizzardPane.setVisible(true);
+        allContent.toBack();
+        allContent.setVisible(false);
+        popup.toBack();
+        popup.setVisible(false);
+        FadeTransition ftShow = new FadeTransition( Duration.millis(500), wizzardPane);
+        ftShow.setFromValue(0.0);
+        ftShow.setToValue(1.0);
+        ftShow.play();
+        
+        wizzardPane.toFront();
+    }
+
+    public void exitWizzard(){
+        allContent.toFront();
+        allContent.setVisible(true);
+        popup.toBack();
+        popup.setVisible(false);
+        wizzardPane.toBack();
+        wizzardPane.setVisible(false);
+        FadeTransition ftShow = new FadeTransition( Duration.millis(500), allContent);
+        ftShow.setFromValue(0.0);
+        ftShow.setToValue(1.0);
+        ftShow.play();
+        
+        switchPage( shoppingcartPane );
+    }
+
 
     public void switchPage( AnchorPane newPane){
         if (newPane == currentShowingPane){

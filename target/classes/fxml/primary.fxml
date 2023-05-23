@@ -22,7 +22,7 @@
     <children>
       <StackPane fx:id="mainStackPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <BorderPane fx:id="allContent" style="-fx-background-color: #fff;">
+            <BorderPane fx:id="allContent" style="-fx-background-color: #fff;" visible="false">
                <top>
                   <AnchorPane maxHeight="170.0" minHeight="110.0" minWidth="-Infinity">
                      <children>
@@ -178,5 +178,6 @@
             </GridPane>
          </children>
       </StackPane>
+      <fx:include source="pages/wizzard.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
     </children>
 </AnchorPane>
