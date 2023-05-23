@@ -87,6 +87,9 @@ public class PrimaryController  {
             }
         });
 
+        if (iMatDataHandler.getShoppingCart().getItems().size() > 0){
+            shoppingCartItemsAmount.setText(String.valueOf(iMatDataHandler.getShoppingCart().getItems().size()));
+        }
 
         iMatDataHandler.getShoppingCart().addShoppingCartListener( new ShoppingCartListener() {
             @Override
@@ -98,6 +101,7 @@ public class PrimaryController  {
     }   
     // any element can be accpeted as a parameter
     public void showPopup( AnchorPane  content ){
+        
         popup.toFront();
         popup.setVisible(true);
         allContent.toBack();
@@ -109,8 +113,12 @@ public class PrimaryController  {
         AnchorPane.setLeftAnchor(content, 0.0);
         AnchorPane.setRightAnchor(content, 0.0);
         
+        FadeTransition ftShow = new FadeTransition( Duration.millis(500), popupContent);
+        ftShow.setFromValue(0.0);
+        ftShow.setToValue(1.0);
+        ftShow.play();
+        
         popupContent.toFront();
-
     }
 
     public void hidePopup(){

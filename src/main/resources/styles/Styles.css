@@ -80,6 +80,17 @@
     -fx-border-width: 1px;
 
 }
+.package_card_content:hover{
+    -fx-cursor: hand;
+    -fx-background-color: #f9f9f9;
+    -fx-border-color: -fx-primary-color;
+}
+.package_card_content:pressed{
+    -fx-background-color: #f9f9f9;
+    -fx-border-color: -fx-primary-color;
+    -fx-scale-x: 0.9;
+    -fx-scale-y: 0.9;
+}
 .package_card_title{
     -fx-font-size: 50px;
     -fx-font-weight: 800;
@@ -94,6 +105,29 @@
     -fx-background-radius: 50px;
     -fx-background-color: -fx-secoundary-color;
 }
+.package_card_button:hover{
+    -fx-background-color: -fx-secoundary-hover-color;
+    -fx-scale-x: 1.04;
+    -fx-scale-y: 1.04;
+    -fx-cursor: hand;
+}
+.package_card_button:pressed{
+    -fx-background-color: -fx-secoundary-color;
+    -fx-scale-x: 0.9;
+    -fx-scale-y: 0.9;
+}
+.package_card_showall:hover{
+    -fx-cursor: hand;
+    -fx-text-fill: -fx-secoundary-hover-color;
+    -fx-scale-x: 1.04;
+    -fx-scale-y: 1.04;
+}
+.package_card_showall:pressed{
+    -fx-text-fill: -fx-secoundary-color;
+    -fx-scale-x: 0.9;
+    -fx-scale-y: 0.9;
+}
+
 .package_card_totalprice{
     -fx-font-size: 30px;
     -fx-font-weight: 500;
