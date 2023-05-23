@@ -3,8 +3,8 @@ package com.imatapp;
 
 import java.io.IOException;
 
-import com.imatapp.components.InspectItems;
 import com.imatapp.events.ShowPopupEvent;
+import com.imatapp.events.SwitchPageEvent;
 import com.imatapp.components.NavigationButton;
 import javafx.animation.FadeTransition;
 import javafx.event.Event;
@@ -43,7 +43,7 @@ public class PrimaryController  {
     private  BorderPane allContent;
 
     @FXML
-    private AnchorPane packagesPane, allproductsPane, shoppingcartPane, accountPane;
+    private AnchorPane packagesPane, allproductsPane, shoppingcartPane, accountPane, historyPane;
 
     @FXML
     private  AnchorPane popupContent;
@@ -72,8 +72,21 @@ public class PrimaryController  {
                 if (event instanceof ShowPopupEvent) {
                     showPopup(((ShowPopupEvent) event).getAnchorPane());
                 }
+                if (event instanceof SwitchPageEvent) {
+                    SwitchPageEvent switchPageEvent = (SwitchPageEvent) event;
+                    String destinationPage = switchPageEvent.getDestinationPage();        
+                    if (destinationPage == "History"){
+                        switchPage(historyPane);
+                        return;
+                    }
+                    if (destinationPage == "Account"){
+                        switchPage(accountPane);
+                        return;
+                    }
+                }
             }
         });
+
 
         iMatDataHandler.getShoppingCart().addShoppingCartListener( new ShoppingCartListener() {
             @Override

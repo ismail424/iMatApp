@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
@@ -11,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox maxHeight="1.7976931348623157E308" maxWidth="1300.0" minWidth="800.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1300.0" minWidth="800.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.imatapp.pages.Account">
    <children>
       <Text fill="#313131" strokeType="OUTSIDE" strokeWidth="0.0" text="Historik">
          <font>
@@ -34,10 +35,13 @@
                   <Font name="Lato Regular" size="30.0" />
                </font>
             </Text>
-            <Button mnemonicParsing="false" style="-fx-background-color: #0A7935; -fx-background-radius: 15px; -fx-padding: 10 40;" text="Dina betällningar" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2">
+            <Button fx:id="historyButton" mnemonicParsing="false" styleClass="account_your_orders_button" text="Dina betällningar" textAlignment="CENTER" textFill="WHITE" GridPane.columnIndex="2">
                <font>
                   <Font name="Lato Regular" size="23.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
          </children>
          <VBox.margin>
@@ -67,7 +71,7 @@
                   <Font name="Lato Regular" size="32.0" />
                </font>
             </Text>
-            <TextField maxHeight="-Infinity" maxWidth="400.0" prefHeight="30.0" promptText="Hjördis Hjördsson" GridPane.columnIndex="1">
+            <TextField fx:id="nameField" maxHeight="-Infinity" maxWidth="400.0" prefHeight="30.0" promptText="Namn" GridPane.columnIndex="1">
                <font>
                   <Font name="Lato Regular" size="23.0" />
                </font>
@@ -86,12 +90,12 @@
             <RowConstraints maxHeight="134.0" minHeight="10.0" prefHeight="79.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <Text fill="#313131" strokeType="OUTSIDE" strokeWidth="0.0" text="Efter namn:" GridPane.halignment="RIGHT">
+            <Text fill="#313131" strokeType="OUTSIDE" strokeWidth="0.0" text="Efternamn:" GridPane.halignment="RIGHT">
                <font>
                   <Font name="Lato Regular" size="32.0" />
                </font>
             </Text>
-            <TextField maxHeight="-Infinity" maxWidth="400.0" prefHeight="30.0" promptText="Hjördis Hjördsson" GridPane.columnIndex="1">
+            <TextField fx:id="lastNameField" maxHeight="-Infinity" maxWidth="400.0" prefHeight="30.0" promptText="Efternamn" GridPane.columnIndex="1">
                <font>
                   <Font name="Lato Regular" size="23.0" />
                </font>
@@ -115,7 +119,7 @@
                   <Font name="Lato Regular" size="32.0" />
                </font>
             </Text>
-            <TextField maxHeight="-Infinity" maxWidth="400.0" prefHeight="30.0" promptText="Hjördis Hjördsson" GridPane.columnIndex="1">
+            <TextField fx:id="emailField" maxHeight="-Infinity" maxWidth="400.0" prefHeight="30.0" promptText="E-post" GridPane.columnIndex="1">
                <font>
                   <Font name="Lato Regular" size="23.0" />
                </font>
@@ -139,7 +143,7 @@
                   <Font name="Lato Regular" size="32.0" />
                </font>
             </Text>
-            <TextField maxHeight="-Infinity" maxWidth="400.0" prefHeight="30.0" promptText="Hjördis Hjördsson" GridPane.columnIndex="1">
+            <TextField fx:id="phoneNumberField" maxHeight="-Infinity" maxWidth="400.0" prefHeight="30.0" promptText="Telefonnummer" GridPane.columnIndex="1">
                <font>
                   <Font name="Lato Regular" size="23.0" />
                </font>
@@ -163,7 +167,7 @@
                   <Font name="Lato Regular" size="32.0" />
                </font>
             </Text>
-            <TextField maxHeight="-Infinity" maxWidth="400.0" prefHeight="30.0" promptText="Hjördis Hjördsson" GridPane.columnIndex="1">
+            <TextField fx:id="addressField" maxHeight="-Infinity" maxWidth="400.0" prefHeight="30.0" promptText="Adress" GridPane.columnIndex="1">
                <font>
                   <Font name="Lato Regular" size="23.0" />
                </font>
@@ -182,12 +186,12 @@
             <RowConstraints maxHeight="134.0" minHeight="10.0" prefHeight="79.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <Text fill="#313131" strokeType="OUTSIDE" strokeWidth="0.0" text="Post kod:" GridPane.halignment="RIGHT">
+            <Text fill="#313131" strokeType="OUTSIDE" strokeWidth="0.0" text="Postkod:" GridPane.halignment="RIGHT">
                <font>
                   <Font name="Lato Regular" size="32.0" />
                </font>
             </Text>
-            <TextField maxHeight="-Infinity" maxWidth="400.0" prefHeight="30.0" promptText="Hjördis Hjördsson" GridPane.columnIndex="1">
+            <TextField fx:id="postCodeField" maxHeight="-Infinity" maxWidth="400.0" prefHeight="30.0" promptText="Postkod" GridPane.columnIndex="1">
                <font>
                   <Font name="Lato Regular" size="23.0" />
                </font>
