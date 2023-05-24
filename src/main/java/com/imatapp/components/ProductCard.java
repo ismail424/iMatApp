@@ -111,15 +111,13 @@ public class ProductCard extends VBox {
             }
             if (amount <= 0) {
                 shoppingCart.removeItem(shoppingItem);
+                showFirstButton();
+
             } else {
                 shoppingItem.setAmount(amount);
                 shoppingCart.fireShoppingCartChanged(shoppingItem, isCache());
             }
-            productAmount.setText(String.valueOf(amount));
             System.out.println("Removed " + product.getName() + " from cart");
-            if (amount <= 0) {
-                showFirstButton();
-            }
         });
 
         shoppingCart.addShoppingCartListener(e -> {
