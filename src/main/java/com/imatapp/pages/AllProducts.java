@@ -6,6 +6,9 @@ import se.chalmers.cse.dat216.project.IMatDataHandler;
 
 public class AllProducts {
 
+
+    
+
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
     @FXML
@@ -18,5 +21,6 @@ public class AllProducts {
         
 
     }
+
 
 }
