@@ -27,11 +27,11 @@ public class MainApp extends Application {
 
     static void setRoot(String fxml, String title) throws IOException {
         Scene scene = new Scene(loadFXML(fxml));
-        stage.setTitle(title);
+        stage.setTitle(title); 
         stage.setScene(scene);
         stage.minWidthProperty().setValue(1100);
-        stage.minHeightProperty().setValue(950);
-        stage.show();
+        stage.minHeightProperty().setValue(800);
+        stage.show();   
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent event) {

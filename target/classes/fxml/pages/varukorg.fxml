@@ -1,16 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.Pane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.imatapp.pages.Cart">
    <children>
-      <Text layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Varukorg" textAlignment="CENTER">
-         <font>
-            <Font size="42.0" />
-         </font>
-      </Text>
+      <BorderPane prefHeight="565.0" prefWidth="797.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <Text id="text" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="allproducts_categories_title" text="Din Varukorg" wrappingWidth="339.73680877685547" BorderPane.alignment="CENTER_LEFT">
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets bottom="15.0" />
+               </BorderPane.margin>
+            </Text>
+         </top>
+         <padding>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </padding>
+         <center>
+            <ScrollPane fitToHeight="true" fitToWidth="true" BorderPane.alignment="CENTER">
+               <content>
+                  <VBox fx:id="allItems" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" />
+               </content>
+            </ScrollPane>
+         </center>
+         <bottom>
+            <HBox alignment="BOTTOM_RIGHT" maxWidth="1.7976931348623157E308" minWidth="-Infinity" BorderPane.alignment="BOTTOM_RIGHT">
+               <children>
+                  <VBox alignment="BOTTOM_RIGHT" HBox.hgrow="ALWAYS">
+                     <children>
+                        <HBox alignment="CENTER_RIGHT" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="package_card_totalprice" text="Total Pris:">
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin></Text>
+                              <Text fx:id="cartTotalPrice" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="package_card_totalprice_sum" text="0 kr" />
+                           </children>
+                        </HBox>
+                        <Button fx:id="goToCheckout" mnemonicParsing="false" styleClass="enter_wizzard_button" text="Gå till kassa" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
    </children>
-</Pane>
+</AnchorPane>

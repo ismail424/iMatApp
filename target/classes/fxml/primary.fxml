@@ -18,11 +18,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" minHeight="700.0" minWidth="1100.0" prefWidth="1228.0" style="-fx-background-color: #F3F3F3;" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.imatapp.PrimaryController">
+<AnchorPane id="AnchorPane" minHeight="700.0" minWidth="1100.0" prefHeight="900.0" prefWidth="1228.0" style="-fx-background-color: #F3F3F3;" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.imatapp.PrimaryController">
     <children>
       <StackPane fx:id="mainStackPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <BorderPane fx:id="allContent" style="-fx-background-color: #fff;">
+            <BorderPane fx:id="allContent" maxHeight="1.7976931348623157E308" style="-fx-background-color: #fff;">
                <top>
                   <AnchorPane maxHeight="170.0" minHeight="110.0" minWidth="-Infinity">
                      <children>
@@ -105,29 +105,29 @@
                   </AnchorPane>
                </top>
                <center>
-                  <StackPane BorderPane.alignment="CENTER">
+                  <StackPane maxHeight="1.7976931348623157E308" BorderPane.alignment="CENTER">
                      <children>
-                        <AnchorPane fx:id="packagesPane">
+                        <AnchorPane fx:id="packagesPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="650.0">
                            <children>
                               <fx:include source="pages/paketer.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                            </children>
                         </AnchorPane>
-                        <AnchorPane fx:id="allproductsPane" visible="false">
+                        <AnchorPane fx:id="allproductsPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="650.0" visible="false">
                            <children>
-                              <fx:include source="pages/alla_varor.fxml" />
+                              <fx:include source="pages/alla_varor.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                            </children>
                         </AnchorPane>
-                        <AnchorPane fx:id="shoppingcartPane" visible="false">
+                        <AnchorPane fx:id="shoppingcartPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="650.0" visible="false">
                            <children>
-                              <fx:include source="pages/varukorg.fxml" />
+                              <fx:include source="pages/varukorg.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                            </children>
                         </AnchorPane>
-                        <AnchorPane fx:id="accountPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" visible="false">
+                        <AnchorPane fx:id="accountPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="650.0" visible="false">
                            <children>
                               <fx:include source="pages/konto.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                            </children>
                         </AnchorPane>
-                        <AnchorPane fx:id="historyPane" visible="false">
+                        <AnchorPane fx:id="historyPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="650.0" visible="false">
                            <children>
                               <fx:include source="pages/history.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                            </children>
