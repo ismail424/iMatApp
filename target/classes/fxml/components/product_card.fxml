@@ -10,15 +10,14 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<VBox alignment="TOP_CENTER" maxHeight="310.0" maxWidth="300.0" minHeight="260.0" minWidth="200.0" styleClass="product_card" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="TOP_CENTER" maxHeight="310.0" maxWidth="340.0" minHeight="260.0" minWidth="200.0" styleClass="product_card" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fitHeight="73.0" fitWidth="138.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
+      <ImageView fx:id="productImage" fitHeight="73.0" fitWidth="138.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
          <image>
             <Image url="@../../images/apple.png" />
          </image>
       </ImageView>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="product_card_text" text="Äpplen" VBox.vgrow="ALWAYS">
+      <Text fx:id="productTitle" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="product_card_text" text="Äpplen" VBox.vgrow="ALWAYS">
          <font>
             <Font name="Lato Regular" size="30.0" />
          </font>
@@ -27,6 +26,7 @@
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="product_card_price" text="19" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="product_card_price_decimal" text="99" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="product_card_unit" text="  kr/kg" />
          </children>
       </HBox>
       <StackPane>

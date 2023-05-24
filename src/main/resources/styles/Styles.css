@@ -353,6 +353,13 @@
     -fx-fill: #53b175;
 }
 
+.product_card_unit{
+    -fx-font-family: 'Lato';
+    -fx-font-weight: 800;
+    -fx-font-size: 30px;
+    -fx-fill: #3D3D3D;
+}
+
 .product_card_amount{
     -fx-font-family: 'Lato';
     -fx-font-weight: 800;

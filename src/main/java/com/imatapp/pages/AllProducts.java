@@ -3,7 +3,6 @@ package com.imatapp.pages;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
-import se.chalmers.cse.dat216.project.ProductCategory;
 
 public class AllProducts {
 
