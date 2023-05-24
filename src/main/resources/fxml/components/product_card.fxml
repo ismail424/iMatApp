@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="TOP_CENTER" maxHeight="310.0" maxWidth="340.0" minHeight="260.0" minWidth="200.0" styleClass="product_card" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="productImage" fitHeight="73.0" fitWidth="138.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
+         <image>
+            <Image url="@../../images/apple.png" />
+         </image>
+      </ImageView>
+      <Text fx:id="productTitle" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="product_card_text" text="Äpplen" VBox.vgrow="ALWAYS">
+         <font>
+            <Font name="Lato Regular" size="30.0" />
+         </font>
+      </Text>
+      <HBox alignment="TOP_CENTER" spacing="3.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="product_card_price" text="19" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="product_card_price_decimal" text="99" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="product_card_unit" text="  kr/kg" />
+         </children>
+      </HBox>
+      <StackPane>
+         <children>
+            <HBox alignment="CENTER" visible="false">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="62.0" style="-fx-background-color: tansparent;" HBox.hgrow="ALWAYS">
+                     <graphic>
+                        <ImageView fitHeight="51.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/Minus.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Text fill="#5b5b5b" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="product_card_amount" text="1" textAlignment="CENTER" wrappingWidth="38.43599987030029" HBox.hgrow="ALWAYS" />
+                  <Button mnemonicParsing="false" prefHeight="27.0" prefWidth="29.0" style="-fx-background-color: tansparent;" HBox.hgrow="ALWAYS">
+                     <graphic>
+                        <ImageView fitHeight="55.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/Plus.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+            <Button mnemonicParsing="false" styleClass="product_card_addbutton" text="Lägg till i varukorgen" />
+         </children>
+      </StackPane>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+   </padding>
+</VBox>
