@@ -15,9 +15,9 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Text?>
 
-<StackPane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.imatapp.pages.Wizzard">
+<StackPane fx:id="stackPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.imatapp.pages.Wizzard">
    <children>
-      <VBox maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="960.0" minWidth="650.0" prefHeight="960.0" prefWidth="1100.0">
+      <VBox fx:id="formPane" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="960.0" minWidth="650.0" prefHeight="960.0" prefWidth="1100.0">
          <children>
             <HBox fx:id="stepper" alignment="CENTER">
                <children>
@@ -302,10 +302,14 @@
                      <children>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_success_text" text="Beställning genomförd!" />
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_success_text_small" text="Din beställning kommer att levereras i tid.&#10;Tack för att du valde vår app!" textAlignment="CENTER" />
-                        <Button fx:id="successButton" mnemonicParsing="false" styleClass="wizzard_success_button" text="Tillbaka hem">
+                        <Button fx:id="successButton" mnemonicParsing="false" text="Tillbaka hem">
                            <VBox.margin>
                               <Insets top="20.0" />
                            </VBox.margin>
+                           <styleClass>
+                              <String fx:value="wizzard_success_button" />
+                              <String fx:value="cart_item_button" />
+                           </styleClass>
                         </Button>
                      </children>
                   </VBox>

@@ -47,7 +47,7 @@ public class PrimaryController  {
     private AnchorPane packagesPane, allproductsPane, shoppingcartPane, accountPane, historyPane;
 
     @FXML
-    private StackPane wizzardPane;
+    private AnchorPane wizzardPane;
 
     @FXML
     private  AnchorPane popupContent;
@@ -71,7 +71,6 @@ public class PrimaryController  {
         });
         
         mainStackPane.addEventHandler(Event.ANY, event -> {
-            System.out.println("Event: " + event.getEventType());
             if (event instanceof ShowPopupEvent) {
                 showPopup(((ShowPopupEvent) event).getAnchorPane());
             } else if (event instanceof SwitchPageEvent) {

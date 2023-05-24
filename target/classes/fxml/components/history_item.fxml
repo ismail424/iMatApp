@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-
 <fx:root maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="600.0" style="-fx-background-radius: 10px; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.25), 10, 0, 0, 3);" styleClass="history_item" type="BorderPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <left>
       <VBox BorderPane.alignment="CENTER">
@@ -19,7 +18,7 @@
                   <Text fx:id="itemAmount" fill="#222222" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="history_item_text_amount" text="11" />
                </children>
             </HBox>
-            <Button mnemonicParsing="false" styleClass="history_item_button" text="Detalijer" VBox.vgrow="ALWAYS" />
+            <Button fx:id="showDetail" mnemonicParsing="false" styleClass="history_item_button" text="Detalijer" VBox.vgrow="ALWAYS" />
          </children>
       </VBox>
    </left>

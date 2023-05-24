@@ -8,16 +8,28 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.shape.Line;
 import javafx.scene.text.Text;
 import com.imatapp.events.SwitchWizzardEvent;
+
+import se.chalmers.cse.dat216.project.CartEvent;
+import se.chalmers.cse.dat216.project.CreditCard;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
+import se.chalmers.cse.dat216.project.ShoppingCart;
+import se.chalmers.cse.dat216.project.ShoppingCartListener;
 
 
 public class Wizzard {
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
     @FXML
     private BorderPane successPane, uppgifterPane, leveransPane, betalningPane, overviewPane;
+
+    @FXML
+    private VBox formPane;
+
+    @FXML
+    private StackPane stackPane;
 
     @FXML
     private BorderPane todayDate, tomorrowDate, twoDaysDate;
@@ -54,6 +66,7 @@ public class Wizzard {
         allStepsCircle = new Button[]{uppgifterStep, leveransStep, betalningStep, overviewStep};
         allStepsLine = new Line[]{leveransLine, betalningLine, overviewLine};
         fillInfo();
+        fillInfoCreditcard();
 
         stopStep.setOnAction(e -> {
             Event.fireEvent(stopStep, new SwitchWizzardEvent( false ));
@@ -62,13 +75,19 @@ public class Wizzard {
         // Next pane when clicking next
         nextStep.setOnAction(e -> {
             if (currentPane == uppgifterPane) {
+
                 nextStep(leveransPane);
             }
             else if (currentPane == leveransPane) {
                 nextStep(betalningPane);
             }
             else if (currentPane == betalningPane) {
+                //validatePayment();
                 nextStep(overviewPane);
+            }
+            else if (currentPane == overviewPane) {
+                confirmOrder();
+                goToSuccess();
             }
         });
 
@@ -103,8 +122,68 @@ public class Wizzard {
             });
         }
 
+        firstNameField.textProperty().addListener((observable, oldValue, newValue) -> {
+            iMatDataHandler.getCustomer().setFirstName(newValue);
+        });
+        lastNameField.textProperty().addListener((observable, oldValue, newValue) -> {
+            iMatDataHandler.getCustomer().setLastName(newValue);
+        });
+        emailField.textProperty().addListener((observable, oldValue, newValue) -> {
+            iMatDataHandler.getCustomer().setEmail(newValue);
+        });
+        addressField.textProperty().addListener((observable, oldValue, newValue) -> {
+            iMatDataHandler.getCustomer().setAddress(newValue);
+        });
+        postCodeField.textProperty().addListener((observable, oldValue, newValue) -> {
+            iMatDataHandler.getCustomer().setPostCode(newValue);
+        });
+        phoneNumberField.textProperty().addListener((observable, oldValue, newValue) -> {
+            iMatDataHandler.getCustomer().setMobilePhoneNumber(newValue);
+        });
+        nameOnCard.textProperty().addListener((observable, oldValue, newValue) -> {
+            iMatDataHandler.getCreditCard().setHoldersName(newValue);
+        });
+        cardNumber.textProperty().addListener((observable, oldValue, newValue) -> {
+            iMatDataHandler.getCreditCard().setCardNumber(newValue);
+        });
+        cardMonth.textProperty().addListener((observable, oldValue, newValue) -> {
+            iMatDataHandler.getCreditCard().setValidMonth(Integer.parseInt(newValue));
+        });
+        cardYear.textProperty().addListener((observable, oldValue, newValue) -> {
+            iMatDataHandler.getCreditCard().setValidYear(Integer.parseInt(newValue));
+        });
+        cardCVC.textProperty().addListener((observable, oldValue, newValue) -> {
+            iMatDataHandler.getCreditCard().setVerificationCode(Integer.parseInt(newValue));
+        });
+    
+        // set listner for price and amount
+        ShoppingCart shoppingCart = iMatDataHandler.getShoppingCart();
+        shoppingCart.addShoppingCartListener(new ShoppingCartListener() {
+            @Override
+            public void shoppingCartChanged(CartEvent cartEvent) {
+                orderAmount.setText(String.valueOf(shoppingCart.getItems().size()));
+                orderPrice.setText(String.valueOf((int) shoppingCart.getTotal()));
+            }
+        });
+
+        successButton.setOnAction(e -> {
+            Event.fireEvent(successButton, new SwitchWizzardEvent( false ));
+        });
     }
 
+    private void fillInfoCreditcard(){
+        CreditCard creditCard = iMatDataHandler.getCreditCard();
+        nameOnCard.setText(creditCard.getHoldersName());
+        creditCard.setCardNumber(cardNumber.getText());
+        creditCard.setValidMonth(Integer.parseInt(cardMonth.getText()));
+        creditCard.setValidYear(Integer.parseInt(cardYear.getText()));
+        creditCard.setVerificationCode(Integer.parseInt(cardCVC.getText()));
+    }
+
+    private void confirmOrder(){
+        
+        iMatDataHandler.placeOrder();
+    }
 
     private void fillInfo(){
         firstNameField.setText(iMatDataHandler.getCustomer().getFirstName());
@@ -171,6 +250,14 @@ public class Wizzard {
         }
         
         currentPane = nextPane;
+    }
+
+    private void goToSuccess() {
+        formPane.setVisible(false);
+        formPane.toBack();
+        successPane.setVisible(true);
+        successPane.toFront();
+
     }
     
 }

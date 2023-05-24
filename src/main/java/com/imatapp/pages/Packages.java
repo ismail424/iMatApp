@@ -6,6 +6,7 @@ import com.imatapp.components.PackageCard;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Order;
 import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 import javafx.fxml.FXML;
 import javafx.scene.layout.VBox;
 
@@ -44,21 +45,18 @@ public class Packages {
         dagensErbjudande = new PackageCard(dagensErbjudandeCard, "Dagens Erbjudande", totaltDagensErbjudande, dagesErbjudandeProducts); 
         
         if (orders.isEmpty() != true){
-            System.out.println("Senaste order storlek -" + orders.get(0).getItems().size());
-            Product[] senasteOrderProducts = new Product[orders.get(0).getItems().size()];
-            orders.get(0).getItems().toArray(senasteOrderProducts);
-            int i = 0;
-            System.out.println("Senaste order produkter:" );
-            for (Product product : senasteOrderProducts) {
-                System.out.println(" - " + product.getName());
-                senasteOrderProducts[i] = iMatDataHandler.getProduct(product.getProductId());
-                i++;
-            }
+            System.out.println("Senaste order storlek: " + orders.get(0).getItems().size());
+            List<ShoppingItem> senasteOrderProducts = orders.get(0).getItems();
+             
             int totalPriceSensate = 0;
-            for (Product product : senasteOrderProducts) {
-                totalPriceSensate += product.getPrice();
+            for (ShoppingItem product : senasteOrderProducts) {
+                totalPriceSensate += product.getProduct().getPrice();
             }
-            senasteOrder = new PackageCard(senasteOrderCard, "Senaste Beställning", totalPriceSensate, senasteOrderProducts); 
+            Product[] senasteOrderProductsArray = new Product[senasteOrderProducts.size()];
+            for (int i = 0; i < senasteOrderProducts.size(); i++) {
+                senasteOrderProductsArray[i] = senasteOrderProducts.get(i).getProduct();
+            }
+            senasteOrder = new PackageCard(senasteOrderCard, "Senaste Beställning", totalPriceSensate, senasteOrderProductsArray); 
         }
         else{
 

@@ -1,6 +1,7 @@
 package com.imatapp.pages;
 
 import javafx.application.Platform;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
@@ -17,6 +18,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 import com.imatapp.components.CartItem;
+import com.imatapp.events.SwitchWizzardEvent;
 
 public class Cart {
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
@@ -57,10 +59,9 @@ public class Cart {
             }
         });
 
-        // TODO FIX THIS
-        // goToCheckout.setOnAction(e -> {
-        //     Event.fireEvent(goToCheckout, new SwitchPageEvent("Checkout"));
-        // });
+        goToCheckout.setOnAction(e -> {
+            Event.fireEvent(goToCheckout, new  SwitchWizzardEvent(true));
+        });
     }
 
     public void updateCart(){
