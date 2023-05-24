@@ -17,19 +17,36 @@
          <left>
             <VBox spacing="5.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label styleClass="allproducts_categories_title" text="Kategorier" VBox.vgrow="ALWAYS">
+                  <Label prefHeight="60.0" styleClass="allproducts_categories_title" text="Kategorier" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <ScrollPane fitToHeight="true" fitToWidth="true" VBox.vgrow="ALWAYS">
+                  <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="500.0" styleClass="allproducts_categories_scrollpane" VBox.vgrow="ALWAYS">
                      <content>
                         <VBox prefWidth="250.0" style="-fx-background-color: #fff;">
                            <children>
-                               <!-- private Label berry, bread, cabbage, citrus_fruit, cold_drinks, dairies, exotic_fruit, fish, flour_sugar_salt, fruit, herb, hot_drinks, meat, melons, nuts_and_seeds, pasta, pod, potato_rice, root_vegetable, sweet, vegetable_fruit; -->
-                              <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="allproducts_categories_button" text="Bär" VBox.vgrow="ALWAYS" />
-
-
+                              <Button fx:id="berryCategory" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="allproducts_categories_button" text="Bär" VBox.vgrow="ALWAYS" />
+                              <Button fx:id="breadCategory" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="allproducts_categories_button" text="Bröd" VBox.vgrow="ALWAYS" />
+                              <Button fx:id="cabbageCategory" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="allproducts_categories_button" text="Kål" VBox.vgrow="ALWAYS" />
+                              <Button fx:id="citrus_fruitCategory" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="allproducts_categories_button" text="Citrusfrukter" VBox.vgrow="ALWAYS" />
+                              <Button fx:id="cold_drinksCategory" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="allproducts_categories_button" text="Kalla drycker" VBox.vgrow="ALWAYS" />
+                              <Button fx:id="dairiesCategory" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="allproducts_categories_button" text="Mejeriprodukter" VBox.vgrow="ALWAYS" />
+                              <Button fx:id="exotic_fruitCategory" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="allproducts_categories_button" text="Exotiska frukter" VBox.vgrow="ALWAYS" />
+                              <Button fx:id="fishCategory" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="allproducts_categories_button" text="Fisk" VBox.vgrow="ALWAYS" />
+                              <Button fx:id="flour_sugar_saltCategory" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="allproducts_categories_button" text="Mjöl, socker, salt" VBox.vgrow="ALWAYS" />
+                              <Button fx:id="fruitCategory" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="allproducts_categories_button" text="Frukt" VBox.vgrow="ALWAYS" />
+                              <Button fx:id="herbCategory" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="allproducts_categories_button" text="Örter" VBox.vgrow="ALWAYS" />
+                              <Button fx:id="hot_drinksCategory" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="allproducts_categories_button" text="Varma drycker" VBox.vgrow="ALWAYS" />
+                              <Button fx:id="meatCategory" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="allproducts_categories_button" text="Kött" VBox.vgrow="ALWAYS" />
+                              <Button fx:id="melonsCategory" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="allproducts_categories_button" text="Meloner" VBox.vgrow="ALWAYS" />
+                              <Button fx:id="nuts_and_seedsCategory" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="allproducts_categories_button" text="Nötter och frön" VBox.vgrow="ALWAYS" />
+                              <Button fx:id="pastaCategory" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="allproducts_categories_button" text="Pasta" VBox.vgrow="ALWAYS" />
+                              <Button fx:id="podCategory" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="allproducts_categories_button" text="Baljväxter" VBox.vgrow="ALWAYS" />
+                              <Button fx:id="potato_riceCategory" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="allproducts_categories_button" text="Potatis och ris" VBox.vgrow="ALWAYS" />
+                              <Button fx:id="root_vegetableCategory" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="allproducts_categories_button" text="Rotfrukter" VBox.vgrow="ALWAYS" />
+                              <Button fx:id="sweetCategory" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="allproducts_categories_button" text="Sötsaker" VBox.vgrow="ALWAYS" />
+                              <Button fx:id="vegetable_fruitCategory" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="allproducts_categories_button" text="Grönsaker och frukt" VBox.vgrow="ALWAYS" />
                            </children>
                         </VBox>
                      </content>
@@ -47,7 +64,7 @@
                      <font>
                         <Font size="27.0" />
                      </font></TextField>
-                  <ScrollPane fitToHeight="true" fitToWidth="true" style="-fx-background-color: transparent;" styleClass="all_products" VBox.vgrow="ALWAYS">
+                  <ScrollPane fitToHeight="true" fitToWidth="true" maxHeight="1.7976931348623157E308" style="-fx-background-color: transparent;" styleClass="all_products" VBox.vgrow="ALWAYS">
                      <content>
                         <FlowPane hgap="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWrapLength="800.0" style="-fx-background-color: transparent;" vgap="10.0">
                            <padding>

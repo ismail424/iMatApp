@@ -10,28 +10,28 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<HBox alignment="CENTER_LEFT" maxHeight="130.0" maxWidth="1.7976931348623157E308" minHeight="100.0" minWidth="-Infinity" prefHeight="130.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root alignment="CENTER_LEFT" maxHeight="130.0" maxWidth="1.7976931348623157E308" minHeight="100.0" minWidth="-Infinity" prefHeight="130.0" prefWidth="600.0" type="HBox" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fitHeight="114.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="itemImage" fitHeight="114.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../images/Bananer.png" />
          </image>
       </ImageView>
       <VBox alignment="TOP_CENTER">
          <children>
-            <Text id="text" strokeType="OUTSIDE" strokeWidth="0.0" text="Bananer" textAlignment="CENTER" wrappingWidth="106.93672943115234" VBox.vgrow="ALWAYS">
+            <Text id="text" fx:id="itemTitle" strokeType="OUTSIDE" strokeWidth="0.0" text="Bananer" textAlignment="CENTER" wrappingWidth="106.93672943115234" VBox.vgrow="ALWAYS">
                <font>
                   <Font size="25.0" />
                </font>
             </Text>
-            <Text id="text" fill="#7c7c7c" strokeType="OUTSIDE" strokeWidth="0.0" text="12kg, Pris" textAlignment="CENTER" wrappingWidth="96.99999999999994" VBox.vgrow="ALWAYS">
+            <Text id="text" fx:id="itemUnitPrice" fill="#7c7c7c" strokeType="OUTSIDE" strokeWidth="0.0" text="12kg, Pris" textAlignment="CENTER" wrappingWidth="96.99999999999994" VBox.vgrow="ALWAYS">
                <font>
                   <Font size="16.0" />
                </font>
             </Text>
             <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="21.0" prefWidth="64.0" style="-fx-background-color: tansparent;">
+                  <Button fx:id="itemDec" mnemonicParsing="false" prefHeight="21.0" prefWidth="64.0" style="-fx-background-color: tansparent;">
                      <graphic>
                         <ImageView fitHeight="38.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -40,14 +40,14 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Text fill="#5b5b5b" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" wrappingWidth="15.26873779296875">
+                  <Text fx:id="itemAmount" fill="#5b5b5b" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" wrappingWidth="15.26873779296875">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Text>
                   <Button mnemonicParsing="false" prefHeight="21.0" prefWidth="41.0" style="-fx-background-color: tansparent;">
                      <graphic>
-                        <ImageView fitHeight="38.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="itemInc" fitHeight="38.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../../images/Plus.png" />
                            </image>
@@ -60,11 +60,11 @@
       </VBox>
       <VBox alignment="CENTER_RIGHT" spacing="40.0" HBox.hgrow="ALWAYS">
          <children>
-            <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="13.0" style="-fx-background-color: transparent;">
+            <Button fx:id="itemRemove" mnemonicParsing="false" prefHeight="30.0" prefWidth="13.0" style="-fx-background-color: transparent;">
                <graphic>
                   <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../../Group%206862.png" />
+                        <Image url="@../../images/close_icon.png" />
                      </image>
                      <effect>
                         <ColorAdjust brightness="0.47" contrast="-0.07" hue="-0.1" saturation="-0.05" />
@@ -72,7 +72,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Text id="text" strokeType="OUTSIDE" strokeWidth="0.0" text="15,99 kr" VBox.vgrow="ALWAYS">
+            <Text id="text" fx:id="itemPrice" strokeType="OUTSIDE" strokeWidth="0.0" text="15,99 kr" VBox.vgrow="ALWAYS">
                <font>
                   <Font size="25.0" />
                </font>
@@ -83,4 +83,4 @@
    <padding>
       <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
    </padding>
-</HBox>
+</fx:root>
