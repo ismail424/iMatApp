@@ -21,34 +21,28 @@ public class ProductCard extends VBox {
     @FXML
     private Button productAdd, productRemove, productFirstAdd;
 
-    private static final FXMLLoader fxmlLoader = new FXMLLoader();
-
-    private Product product;
-    private IMatDataHandler dataHandler;
-
-    static {
-        fxmlLoader.setControllerFactory(clazz -> clazz.newInstance());
-        fxmlLoader.setLocation(ProductCard.class.getResource("/fxml/components/product_card.fxml"));
-    }
-
     public ProductCard(Product product, IMatDataHandler dataHandler) {
-        this.product = product;
-        this.dataHandler = dataHandler;
-
-        if (fxmlLoader.getNamespace() == null) {
-            try {
-                fxmlLoader.load();
-            } catch (IOException e) {
-                e.printStackTr     ace();
-            }
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/components/product_card.fxml"));
+        fxmlLoader.setController(this);
+        fxmlLoader.setRoot(this);
+        try {
+            fxmlLoader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+
+        productImage = (ImageView) fxmlLoader.getNamespace().get("productImage");
+        productTitle = (Text) fxmlLoader.getNamespace().get("productTitle");
+        productPrice = (Text) fxmlLoader.getNamespace().get("productPrice");
+        productPriceDecimal = (Text) fxmlLoader.getNamespace().get("productPriceDecimal");
+        productAmount = (Text) fxmlLoader.getNamespace().get("productAmount");
+        productUnit = (Text) fxmlLoader.getNamespace().get("productUnit");
+        productAdd = (Button) fxmlLoader.getNamespace().get("productAdd");
+        productRemove = (Button) fxmlLoader.getNamespace().get("productRemove");
+        productFirstAdd = (Button) fxmlLoader.getNamespace().get("productFirstAdd");
 
         productImage.setImage(dataHandler.getFXImage(product, 200, 200));
         productTitle.setText(product.getName());
-    }
-
-    @FXML
-    private void initialize() {
         double price = product.getPrice();
         int intPrice = (int) price;
         int decimalPart = (int) ((price - intPrice) * 100);
@@ -57,5 +51,4 @@ public class ProductCard extends VBox {
         productPriceDecimal.setText(String.format("%02d", decimalPart));
         productUnit.setText(" " + product.getUnit());
     }
-
 }
