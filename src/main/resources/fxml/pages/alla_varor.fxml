@@ -1,114 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../../styles/AllProducts.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.imatapp.pages.AllProducts">
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.imatapp.pages.AllProducts">
    <children>
-      <HBox prefHeight="402.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-         <children>
-            <AnchorPane prefHeight="296.0" prefWidth="198.0">
+      <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox spacing="5.0" BorderPane.alignment="CENTER">
                <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="371.0" layoutX="6.0" layoutY="9.0" stroke="#b1b1b1" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" width="160.0" />
-                  <Label id="allproducts_categories_text" layoutX="16.0" layoutY="14.0" prefHeight="34.0" prefWidth="140.0" text="Kategorier">
+                  <Label styleClass="allproducts_categories_title" text="Kategorier" VBox.vgrow="ALWAYS">
                      <font>
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <Label id="allproducts_under_categories_text" layoutX="28.0" layoutY="74.0" prefHeight="23.0" prefWidth="131.0" text="Frukt" textFill="#53b175" />
-                  <Label id="allproducts_under_categories_text" layoutX="28.0" layoutY="112.0" prefHeight="23.0" prefWidth="131.0" text="Pasta" />
-                  <Label id="allproducts_under_categories_text" layoutX="28.0" layoutY="149.0" prefHeight="23.0" prefWidth="131.0" text="Chips &amp; Godis" />
-                  <Label id="allproducts_under_categories_text" layoutX="28.0" layoutY="187.0" prefHeight="23.0" prefWidth="131.0" text="Glass" />
-                  <Label id="allproducts_under_categories_text" layoutX="28.0" layoutY="224.0" prefHeight="23.0" prefWidth="131.0" text="Erbjudande" />
+                  <Label fx:id="berry" text="Frukt" textFill="#53b175" VBox.vgrow="ALWAYS">
+                     <styleClass>
+                        <String fx:value="allproducts_categories_text" />
+                        <String fx:value="active_text" />
+                     </styleClass></Label>
+                  <Label fx:id="bread" styleClass="allproducts_categories_text" text="Bröd" textFill="#53b175" VBox.vgrow="ALWAYS" />
+                  <Label fx:id="cabbage" styleClass="allproducts_categories_text" text="Kål" textFill="#53b175" VBox.vgrow="ALWAYS" />
+                  <Label fx:id="citrus_fruit" styleClass="allproducts_categories_text" text="Citrus frukter" textFill="#53b175" VBox.vgrow="ALWAYS" />
+                  <Label fx:id="cold_drinks" styleClass="allproducts_categories_text" text="Kalla drycker" textFill="#53b175" VBox.vgrow="ALWAYS" />
+                  <Label fx:id="dairies" styleClass="allproducts_categories_text" text="Mejeriprodukter" textFill="#53b175" VBox.vgrow="ALWAYS" />
+                  <Label fx:id="exotic_fruit" styleClass="allproducts_categories_text" text="Exotiska frukter" textFill="#53b175" VBox.vgrow="ALWAYS" />
+                  <Label fx:id="fish" styleClass="allproducts_categories_text" text="Fisk" textFill="#53b175" VBox.vgrow="ALWAYS" />
+                  <Label fx:id="flour_sugar_salt" styleClass="allproducts_categories_text" text="Mjöl, socker &amp; salt" textFill="#53b175" VBox.vgrow="ALWAYS" />
+                  <Label fx:id="fruit" styleClass="allproducts_categories_text" text="Frukt" textFill="#53b175" VBox.vgrow="ALWAYS" />
+                  <Label fx:id="herb" styleClass="allproducts_categories_text" text="Örter" textFill="#53b175" VBox.vgrow="ALWAYS" />
+                  <Label fx:id="hot_drinks" styleClass="allproducts_categories_text" text="Varma drycker" textFill="#53b175" VBox.vgrow="ALWAYS" />
+                  <Label fx:id="meat" styleClass="allproducts_categories_text" text="Kött" textFill="#53b175" VBox.vgrow="ALWAYS" />
+                  <Label fx:id="melons" styleClass="allproducts_categories_text" text="Meloner" textFill="#53b175" VBox.vgrow="ALWAYS" />
+                  <Label fx:id="nuts_and_seeds" styleClass="allproducts_categories_text" text="Nötter &amp; frön" textFill="#53b175" VBox.vgrow="ALWAYS" />
+                  <Label fx:id="pasta" styleClass="allproducts_categories_text" text="Pasta" textFill="#53b175" VBox.vgrow="ALWAYS" />
+                  <Label fx:id="pod" styleClass="allproducts_categories_text" text="Baljväxter" textFill="#53b175" VBox.vgrow="ALWAYS" />
+                  <Label fx:id="potato_rice" styleClass="allproducts_categories_text" text="Potatis &amp; ris" textFill="#53b175" VBox.vgrow="ALWAYS" />
+                  <Label fx:id="root_vegetable" styleClass="allproducts_categories_text" text="Rotfrukter" textFill="#53b175" VBox.vgrow="ALWAYS" />
+                  <Label fx:id="sweet" styleClass="allproducts_categories_text" text="Sötsaker" textFill="#53b175" VBox.vgrow="ALWAYS" />
+                  <Label fx:id="vegetable_fruit" styleClass="allproducts_categories_text" text="Grönsaker &amp; frukt" textFill="#53b175" VBox.vgrow="ALWAYS" />
                </children>
-            </AnchorPane>
-            <AnchorPane prefHeight="402.0" prefWidth="482.0" HBox.hgrow="ALWAYS">
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+         </left>
+         <center>
+            <VBox prefHeight="500.0" prefWidth="543.0" spacing="6.0" BorderPane.alignment="CENTER">
                <children>
-                  <AnchorPane layoutX="9.0" layoutY="13.0">
-                     <children>
-                        <TextField id="allproducts_search_box" fx:id="SearchBar" prefHeight="42.0" prefWidth="417.0" promptText="Sök efter produkter" />
-                        <Button layoutX="376.0" layoutY="4.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="25.0" style="-fx-background-color: tansparent;">
-                           <graphic>
-                              <ImageView fitHeight="25.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../images/search_icon.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Button>
-                     </children>
-                  </AnchorPane>
-                  <ScrollPane layoutX="8.0" layoutY="61.0" prefHeight="326.0" prefWidth="418.0">
-                    <content>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="326.0" prefWidth="418.0">
+                  <TextField id="allproducts_search_box" fx:id="SearchBar" prefHeight="60.0" promptText="Sök efter produkter" styleClass="navbar_search_box">
+                     <font>
+                        <Font size="27.0" />
+                     </font></TextField>
+                  <ScrollPane fitToHeight="true" fitToWidth="true" styleClass="all_products" VBox.vgrow="ALWAYS">
+                     <content>
+                        <FlowPane hgap="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWrapLength="800.0" vgap="10.0">
                            <children>
-                              <Pane layoutX="14.0" layoutY="14.0" prefHeight="130.0" prefWidth="130.0">
-                                 <children>
-                                    <Button layoutX="14.0" layoutY="89.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="29.0" style="-fx-background-color: tansparent;">
-                                       <graphic>
-                                          <ImageView fitHeight="27.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../../../../../target/classes/images/Minus.png" />
-                                             </image>
-                                          </ImageView>
-                                       </graphic>
-                                    </Button>
-                                    <Button layoutX="70.0" layoutY="89.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="29.0" style="-fx-background-color: tansparent;">
-                                       <graphic>
-                                          <ImageView fitHeight="27.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../../../../../target/classes/images/Plus.png" />
-                                             </image>
-                                          </ImageView>
-                                       </graphic>
-                                    </Button>
-                                    <ImageView fitHeight="42.0" fitWidth="83.0" layoutX="30.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../../../../../target/classes/images/apple.png" />
-                                       </image>
-                                    </ImageView>
-                                    <Text id="text" layoutX="32.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Äpplen" textAlignment="CENTER" wrappingWidth="65.33672714233398">
-                                       <font>
-                                          <Font size="16.0" />
-                                       </font>
-                                    </Text>
-                                    <Text id="text" fill="#53b175" layoutX="70.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="99" />
-                                    <Text fill="#5b5b5b" layoutX="61.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" />
-                                    <Text id="text" fill="#53b175" layoutX="47.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="19" wrappingWidth="24.00002441406241">
-                                       <font>
-                                          <Font size="18.0" />
-                                       </font>
-                                    </Text>
-                                 </children>
-                                 <effect>
-                                    <DropShadow>
-                                       <color>
-                                          <Color red="0.6000000238418579" green="0.6000000238418579" blue="0.6000000238418579" />
-                                       </color>
-                                    </DropShadow>
-                                 </effect>
-                              </Pane>
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="130.0" layoutX="116.0" layoutY="75.0" stroke="#cccccc" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeType="OUTSIDE" width="130.0" />
+                              <fx:include source="../components/product_card.fxml" />
+                              <fx:include source="../components/product_card.fxml" />
                            </children>
-                        </AnchorPane>
-                    </content>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </FlowPane>
+                     </content>
                   </ScrollPane>
                </children>
-            </AnchorPane>
-         </children>
-      </HBox>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </center>
+      </BorderPane>
    </children>
 </AnchorPane>
