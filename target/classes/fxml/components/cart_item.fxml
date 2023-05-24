@@ -64,7 +64,7 @@
                <graphic>
                   <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../../Group%206862.png" />
+                        <Image url="@../../images/close.png" />
                      </image>
                      <effect>
                         <ColorAdjust brightness="0.47" contrast="-0.07" hue="-0.1" saturation="-0.05" />
