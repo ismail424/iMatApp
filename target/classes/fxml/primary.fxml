@@ -22,7 +22,7 @@
     <children>
       <StackPane fx:id="mainStackPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <BorderPane fx:id="allContent" maxHeight="950.0" style="-fx-background-color: #fff;">
+            <BorderPane fx:id="allContent" maxHeight="1.7976931348623157E308" style="-fx-background-color: #fff;">
                <top>
                   <AnchorPane maxHeight="170.0" minHeight="110.0" minWidth="-Infinity">
                      <children>

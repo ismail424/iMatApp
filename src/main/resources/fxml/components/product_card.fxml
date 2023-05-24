@@ -10,9 +10,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<fx:root alignment="TOP_CENTER" cache="true" cacheHint="SPEED" maxHeight="320.0" maxWidth="300.0" minHeight="260.0" minWidth="200.0" prefWidth="260.0" styleClass="product_card" type="VBox" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root alignment="TOP_CENTER" cache="true" cacheHint="SPEED" maxHeight="300.0" maxWidth="340.0" minHeight="300.0" minWidth="300.0" prefHeight="280.0" prefWidth="300.0" styleClass="product_card" type="VBox" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fx:id="productImage" fitHeight="73.0" fitWidth="138.0" pickOnBounds="true" preserveRatio="true" styleClass="productImage" VBox.vgrow="ALWAYS">
+      <ImageView fx:id="productImage" fitHeight="118.0" fitWidth="176.0" pickOnBounds="true" preserveRatio="true" styleClass="productImage" VBox.vgrow="ALWAYS">
          <image>
             <Image url="@../../images/apple.png" />
          </image>
@@ -24,8 +24,8 @@
       </Text>
       <HBox alignment="TOP_CENTER" spacing="3.0">
          <children>
-            <Text fx:id="productPrice" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="product_card_price" text="19" />
-            <Text fx:id="productPriceDecimal" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="product_card_price_decimal" text="99" />
+            <Text fx:id="productPrice" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="package_card_item_price" text="19" />
+            <Text fx:id="productPriceDecimal" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="package_card_item_price_decimal" text="99" />
             <VBox alignment="CENTER">
                <children>
                   <Text fx:id="productUnit" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="product_card_unit" text="kr/kg" />
@@ -33,11 +33,11 @@
             </VBox>
          </children>
       </HBox>
-      <StackPane VBox.vgrow="ALWAYS">
+      <StackPane fx:id="buttons" alignment="BOTTOM_CENTER" VBox.vgrow="ALWAYS">
          <children>
-            <HBox alignment="CENTER" visible="false">
+            <HBox fx:id="normalButtons" alignment="CENTER" visible="false">
                <children>
-                  <Button fx:id="productRemove" mnemonicParsing="false" prefHeight="42.0" prefWidth="62.0" style="-fx-background-color: tansparent;" HBox.hgrow="ALWAYS">
+                  <Button fx:id="productRemove" mnemonicParsing="false" prefHeight="42.0" prefWidth="62.0" style="-fx-background-color: tansparent;" styleClass="cart_item_button" HBox.hgrow="ALWAYS">
                      <graphic>
                         <ImageView fitHeight="51.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -46,8 +46,8 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Text fx:id="productAmount" fill="#5b5b5b" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="product_card_amount" text="1" textAlignment="CENTER" wrappingWidth="38.43599987030029" HBox.hgrow="ALWAYS" />
-                  <Button fx:id="productAdd" mnemonicParsing="false" prefHeight="27.0" prefWidth="29.0" style="-fx-background-color: tansparent;" HBox.hgrow="ALWAYS">
+                  <Text fx:id="productAmount" fill="#5b5b5b" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="product_card_amount" text="1" textAlignment="CENTER" wrappingWidth="59.43599987030029" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="productAdd" mnemonicParsing="false" prefHeight="27.0" prefWidth="29.0" style="-fx-background-color: tansparent;" styleClass="cart_item_button" HBox.hgrow="ALWAYS">
                      <graphic>
                         <ImageView fitHeight="55.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
                            <image>
