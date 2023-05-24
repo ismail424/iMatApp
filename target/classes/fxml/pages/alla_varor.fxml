@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
@@ -22,10 +22,21 @@
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <ComboBox prefWidth="150.0" />
+                  <ScrollPane fitToHeight="true" fitToWidth="true" VBox.vgrow="ALWAYS">
+                     <content>
+                        <VBox prefWidth="250.0" style="-fx-background-color: #fff;">
+                           <children>
+                               <!-- private Label berry, bread, cabbage, citrus_fruit, cold_drinks, dairies, exotic_fruit, fish, flour_sugar_salt, fruit, herb, hot_drinks, meat, melons, nuts_and_seeds, pasta, pod, potato_rice, root_vegetable, sweet, vegetable_fruit; -->
+                              <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="allproducts_categories_button" text="Bär" VBox.vgrow="ALWAYS" />
+
+
+                           </children>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
                </children>
                <padding>
-                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
             </VBox>
          </left>
@@ -36,13 +47,9 @@
                      <font>
                         <Font size="27.0" />
                      </font></TextField>
-                  <ScrollPane fitToHeight="true" fitToWidth="true" styleClass="all_products" VBox.vgrow="ALWAYS">
+                  <ScrollPane fitToHeight="true" fitToWidth="true" style="-fx-background-color: transparent;" styleClass="all_products" VBox.vgrow="ALWAYS">
                      <content>
-                        <FlowPane hgap="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWrapLength="800.0" vgap="10.0">
-                           <children>
-                              <fx:include source="../components/product_card.fxml" />
-                              <fx:include source="../components/product_card.fxml" />
-                           </children>
+                        <FlowPane hgap="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWrapLength="800.0" style="-fx-background-color: transparent;" vgap="10.0">
                            <padding>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </padding>

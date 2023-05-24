@@ -13,7 +13,7 @@ public class AllProducts {
 
     @FXML
     private Label berry, bread, cabbage, citrus_fruit, cold_drinks, dairies, exotic_fruit, fish, flour_sugar_salt, fruit, herb, hot_drinks, meat, melons, nuts_and_seeds, pasta, pod, potato_rice, root_vegetable, sweet, vegetable_fruit;
-
+    // how many labels are there? 21
 
     @FXML
     public void initialize(){
