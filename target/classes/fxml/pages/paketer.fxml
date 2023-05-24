@@ -11,9 +11,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxWidth="-Infinity" prefHeight="750.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.imatapp.pages.Packages">
+<AnchorPane maxWidth="-Infinity" prefHeight="650.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.imatapp.pages.Packages">
    <children>
-      <HBox alignment="TOP_CENTER" maxWidth="1.7976931348623157E308" minHeight="350.0" minWidth="700.0" prefWidth="1300.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <HBox alignment="TOP_CENTER" maxWidth="1.7976931348623157E308" minHeight="350.0" minWidth="700.0" prefHeight="650.0" prefWidth="1300.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <VBox fx:id="dagensErbjudandeCard" alignment="TOP_CENTER" maxHeight="900.0" maxWidth="650.0" minHeight="300.0" minWidth="200.0" prefWidth="250.0" spacing="5.0" styleClass="package_card" HBox.hgrow="ALWAYS">
                <cursor>
@@ -21,9 +21,9 @@
                </cursor>
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="package_card_title" text="Dagens Erbjudande" VBox.vgrow="ALWAYS" />
-                  <VBox alignment="TOP_CENTER" minWidth="50.0" prefHeight="85.0" prefWidth="0.0" styleClass="package_card_content" VBox.vgrow="ALWAYS">
+                  <VBox alignment="TOP_CENTER" styleClass="package_card_content" VBox.vgrow="ALWAYS">
                      <children>
-                        <HBox alignment="CENTER_LEFT" prefHeight="85.0" prefWidth="364.0" spacing="20.0" styleClass="package_card_item" VBox.vgrow="ALWAYS">
+                        <HBox alignment="CENTER_LEFT" spacing="20.0" styleClass="package_card_item" VBox.vgrow="ALWAYS">
                            <children>
                               <ImageView fitHeight="100.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true" styleClass="package_card_item_image" HBox.hgrow="ALWAYS">
                                  <image>
@@ -46,15 +46,12 @@
                                     </HBox>
                                  </children>
                                  <padding>
-                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                    <Insets left="10.0" right="10.0" />
                                  </padding>
                               </VBox>
                            </children>
-                           <padding>
-                              <Insets bottom="5.0" left="10.0" top="5.0" />
-                           </padding>
                         </HBox>
-                        <HBox alignment="CENTER_LEFT" prefHeight="85.0" prefWidth="364.0" spacing="20.0" styleClass="package_card_item" VBox.vgrow="ALWAYS">
+                        <HBox alignment="CENTER_LEFT" spacing="20.0" styleClass="package_card_item" VBox.vgrow="ALWAYS">
                            <children>
                               <ImageView fitHeight="100.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true" styleClass="package_card_item_image" HBox.hgrow="ALWAYS">
                                  <image>
@@ -77,15 +74,12 @@
                                     </HBox>
                                  </children>
                                  <padding>
-                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                    <Insets left="10.0" right="10.0" />
                                  </padding>
                               </VBox>
                            </children>
-                           <padding>
-                              <Insets bottom="5.0" left="10.0" top="5.0" />
-                           </padding>
                         </HBox>
-                        <HBox alignment="CENTER_LEFT" prefHeight="85.0" prefWidth="364.0" spacing="20.0" styleClass="package_card_item" VBox.vgrow="ALWAYS">
+                        <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="package_card_item" VBox.vgrow="ALWAYS">
                            <children>
                               <ImageView fitHeight="100.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true" styleClass="package_card_item_image" HBox.hgrow="ALWAYS">
                                  <image>
@@ -108,15 +102,12 @@
                                     </HBox>
                                  </children>
                                  <padding>
-                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                    <Insets left="10.0" right="10.0" />
                                  </padding>
                               </VBox>
                            </children>
-                           <padding>
-                              <Insets bottom="5.0" left="10.0" top="5.0" />
-                           </padding>
                         </HBox>
-                        <VBox alignment="CENTER" prefWidth="100.0" VBox.vgrow="NEVER">
+                        <VBox alignment="CENTER" VBox.vgrow="NEVER">
                            <children>
                               <Text fill="#282828" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="package_card_item_amount" text="+4 Varor Till" textAlignment="CENTER" wrappingWidth="170.67499923706055">
                                  <font>
@@ -130,7 +121,7 @@
                               </Text>
                            </children>
                            <padding>
-                              <Insets bottom="20.0" />
+                              <Insets bottom="5.0" />
                            </padding>
                         </VBox>
                      </children>
@@ -138,7 +129,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </VBox>
-                  <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefWidth="94.0" spacing="5.0" VBox.vgrow="ALWAYS">
+                  <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" spacing="5.0" VBox.vgrow="ALWAYS">
                      <children>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="package_card_totalprice" text="Total Pris" />
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="package_card_totalprice_sum" text="199 kr" />
@@ -159,9 +150,9 @@
                </cursor>
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="package_card_title" text="Dagens Erbjudande" VBox.vgrow="ALWAYS" />
-                  <VBox alignment="TOP_CENTER" minWidth="50.0" prefHeight="85.0" prefWidth="0.0" styleClass="package_card_content" VBox.vgrow="ALWAYS">
+                  <VBox alignment="TOP_CENTER" styleClass="package_card_content" VBox.vgrow="ALWAYS">
                      <children>
-                        <HBox alignment="CENTER_LEFT" prefHeight="85.0" prefWidth="364.0" spacing="20.0" styleClass="package_card_item" VBox.vgrow="ALWAYS">
+                        <HBox alignment="CENTER_LEFT" spacing="20.0" styleClass="package_card_item" VBox.vgrow="ALWAYS">
                            <children>
                               <ImageView fitHeight="100.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true" styleClass="package_card_item_image" HBox.hgrow="ALWAYS">
                                  <image>
@@ -184,15 +175,15 @@
                                     </HBox>
                                  </children>
                                  <padding>
-                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                    <Insets left="10.0" right="10.0" />
                                  </padding>
                               </VBox>
                            </children>
                            <padding>
-                              <Insets bottom="5.0" left="10.0" top="5.0" />
+                              <Insets left="10.0" />
                            </padding>
                         </HBox>
-                        <HBox alignment="CENTER_LEFT" prefHeight="85.0" prefWidth="364.0" spacing="20.0" styleClass="package_card_item" VBox.vgrow="ALWAYS">
+                        <HBox alignment="CENTER_LEFT" spacing="20.0" styleClass="package_card_item" VBox.vgrow="ALWAYS">
                            <children>
                               <ImageView fitHeight="100.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true" styleClass="package_card_item_image" HBox.hgrow="ALWAYS">
                                  <image>
@@ -215,22 +206,22 @@
                                     </HBox>
                                  </children>
                                  <padding>
-                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                    <Insets left="10.0" right="10.0" />
                                  </padding>
                               </VBox>
                            </children>
                            <padding>
-                              <Insets bottom="5.0" left="10.0" top="5.0" />
+                              <Insets left="10.0" />
                            </padding>
                         </HBox>
-                        <HBox alignment="CENTER_LEFT" prefHeight="85.0" prefWidth="364.0" spacing="20.0" styleClass="package_card_item" VBox.vgrow="ALWAYS">
+                        <HBox alignment="CENTER_LEFT" spacing="20.0" styleClass="package_card_item" VBox.vgrow="ALWAYS">
                            <children>
                               <ImageView fitHeight="100.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true" styleClass="package_card_item_image" HBox.hgrow="ALWAYS">
                                  <image>
                                     <Image url="@../../images/apple.png" />
                                  </image>
                               </ImageView>
-                              <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                              <VBox alignment="CENTER_LEFT" spacing="5.0" HBox.hgrow="ALWAYS">
                                  <children>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="package_card_item_title" text="Äpplen" />
                                     <HBox>
@@ -246,15 +237,15 @@
                                     </HBox>
                                  </children>
                                  <padding>
-                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                    <Insets left="10.0" right="10.0" />
                                  </padding>
                               </VBox>
                            </children>
                            <padding>
-                              <Insets bottom="5.0" left="10.0" top="5.0" />
+                              <Insets left="10.0" />
                            </padding>
                         </HBox>
-                        <VBox alignment="CENTER" prefWidth="100.0" VBox.vgrow="NEVER">
+                        <VBox alignment="CENTER" VBox.vgrow="NEVER">
                            <children>
                               <Text fill="#282828" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="package_card_item_amount" text="+4 Varor Till" textAlignment="CENTER" wrappingWidth="170.67499923706055">
                                  <font>
@@ -268,7 +259,7 @@
                               </Text>
                            </children>
                            <padding>
-                              <Insets bottom="20.0" />
+                              <Insets bottom="5.0" />
                            </padding>
                         </VBox>
                      </children>
@@ -276,7 +267,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </VBox>
-                  <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" prefWidth="94.0" spacing="5.0" VBox.vgrow="ALWAYS">
+                  <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" spacing="5.0" VBox.vgrow="ALWAYS">
                      <children>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="package_card_totalprice" text="Total Pris" />
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="package_card_totalprice_sum" text="199 kr" />

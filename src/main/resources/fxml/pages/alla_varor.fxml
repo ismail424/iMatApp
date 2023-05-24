@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
@@ -22,31 +22,7 @@
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <Label fx:id="berry" text="Frukt" textFill="#53b175" VBox.vgrow="ALWAYS">
-                     <styleClass>
-                        <String fx:value="allproducts_categories_text" />
-                        <String fx:value="active_text" />
-                     </styleClass></Label>
-                  <Label fx:id="bread" styleClass="allproducts_categories_text" text="Bröd" textFill="#53b175" VBox.vgrow="ALWAYS" />
-                  <Label fx:id="cabbage" styleClass="allproducts_categories_text" text="Kål" textFill="#53b175" VBox.vgrow="ALWAYS" />
-                  <Label fx:id="citrus_fruit" styleClass="allproducts_categories_text" text="Citrus frukter" textFill="#53b175" VBox.vgrow="ALWAYS" />
-                  <Label fx:id="cold_drinks" styleClass="allproducts_categories_text" text="Kalla drycker" textFill="#53b175" VBox.vgrow="ALWAYS" />
-                  <Label fx:id="dairies" styleClass="allproducts_categories_text" text="Mejeriprodukter" textFill="#53b175" VBox.vgrow="ALWAYS" />
-                  <Label fx:id="exotic_fruit" styleClass="allproducts_categories_text" text="Exotiska frukter" textFill="#53b175" VBox.vgrow="ALWAYS" />
-                  <Label fx:id="fish" styleClass="allproducts_categories_text" text="Fisk" textFill="#53b175" VBox.vgrow="ALWAYS" />
-                  <Label fx:id="flour_sugar_salt" styleClass="allproducts_categories_text" text="Mjöl, socker &amp; salt" textFill="#53b175" VBox.vgrow="ALWAYS" />
-                  <Label fx:id="fruit" styleClass="allproducts_categories_text" text="Frukt" textFill="#53b175" VBox.vgrow="ALWAYS" />
-                  <Label fx:id="herb" styleClass="allproducts_categories_text" text="Örter" textFill="#53b175" VBox.vgrow="ALWAYS" />
-                  <Label fx:id="hot_drinks" styleClass="allproducts_categories_text" text="Varma drycker" textFill="#53b175" VBox.vgrow="ALWAYS" />
-                  <Label fx:id="meat" styleClass="allproducts_categories_text" text="Kött" textFill="#53b175" VBox.vgrow="ALWAYS" />
-                  <Label fx:id="melons" styleClass="allproducts_categories_text" text="Meloner" textFill="#53b175" VBox.vgrow="ALWAYS" />
-                  <Label fx:id="nuts_and_seeds" styleClass="allproducts_categories_text" text="Nötter &amp; frön" textFill="#53b175" VBox.vgrow="ALWAYS" />
-                  <Label fx:id="pasta" styleClass="allproducts_categories_text" text="Pasta" textFill="#53b175" VBox.vgrow="ALWAYS" />
-                  <Label fx:id="pod" styleClass="allproducts_categories_text" text="Baljväxter" textFill="#53b175" VBox.vgrow="ALWAYS" />
-                  <Label fx:id="potato_rice" styleClass="allproducts_categories_text" text="Potatis &amp; ris" textFill="#53b175" VBox.vgrow="ALWAYS" />
-                  <Label fx:id="root_vegetable" styleClass="allproducts_categories_text" text="Rotfrukter" textFill="#53b175" VBox.vgrow="ALWAYS" />
-                  <Label fx:id="sweet" styleClass="allproducts_categories_text" text="Sötsaker" textFill="#53b175" VBox.vgrow="ALWAYS" />
-                  <Label fx:id="vegetable_fruit" styleClass="allproducts_categories_text" text="Grönsaker &amp; frukt" textFill="#53b175" VBox.vgrow="ALWAYS" />
+                  <ComboBox prefWidth="150.0" />
                </children>
                <padding>
                   <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
