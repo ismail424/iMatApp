@@ -29,6 +29,7 @@ public class History extends AnchorPane {
         });
 
         // Get all the previous orders
+        System.out.println(iMatDataHandler.getOrders());
         if (iMatDataHandler.getOrders().isEmpty()) {
             Text noOrders = new Text("Du har inga tidigare ordrar");
             noOrders.getStyleClass().add("no-orders");
@@ -37,9 +38,7 @@ public class History extends AnchorPane {
         }
         else{
             iMatDataHandler.getOrders().forEach(order -> {
-                // Create a new order item
                 HistoryItem orderItem = new HistoryItem(order);
-                // Add the order item to the history items
                 historyItems.getChildren().add(orderItem);
             });
         }

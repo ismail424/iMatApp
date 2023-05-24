@@ -279,6 +279,211 @@
 }
 
 
+
+/* Wizzard Cart Page */
+.wizzard_next_button{
+    -fx-font-family: 'Lato';
+    -fx-font-weight: 800;
+    -fx-font-size: 30px;
+    -fx-padding: 10 40;
+    -fx-background-color: #0A7935;
+    -fx-text-fill: #fff;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.25), 10, 0, 0, 3);
+    -fx-background-radius: 10px;
+}
+.wizzard_next_button:hover{
+    -fx-background-color: #065c27;
+    -fx-background-radius: 10px;
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+}
+.wizzard_next_button:pressed{
+    -fx-background-color: #065c27;
+    -fx-scale-x: 0.9;
+    -fx-scale-y: 0.9;
+    -fx-text-fill: #fff;
+}
+
+.wizzard_previous_button{
+    -fx-font-family: 'Lato';
+    -fx-font-weight: 800;
+    -fx-font-size: 30px;
+    -fx-padding: 10 40;
+    -fx-background-color: #5B5B5B;
+    -fx-text-fill: #fff;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.25), 10, 0, 0, 3);
+    -fx-background-radius: 10px;
+}
+.wizzard_previous_button:hover{
+    -fx-background-color: #474747;
+    -fx-background-radius: 10px;
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+}
+.wizzard_previous_button:pressed{
+    -fx-background-color: #474747;
+    -fx-scale-x: 0.9;
+    -fx-scale-y: 0.9;
+    -fx-text-fill: #fff;
+}
+
+
+.wizzard_stepper_button{
+    -fx-background-color:transparent;
+    -fx-background-radius: 10px;
+    -fx-padding: 30 15;
+    -fx-font-size: 20px;
+    -fx-border-color: #333;
+    -fx-border-radius: 150px;
+    -fx-border-width: 2px;
+}
+.wizzard_stepper_button:hover{
+    -fx-scale-x: 1.04;
+    -fx-scale-y: 1.04;
+    -fx-cursor: hand;
+}
+.wizzard_stepper_button:pressed{
+    -fx-scale-x: 1;
+    -fx-scale-y: 1;
+}
+.wizzard_stepper_line{
+    -fx-stroke: #333;
+    -fx-stroke-width: 2px;
+}
+
+.wizzard_stepper_curent{
+    -fx-background-color: -fx-primary-color;
+    -fx-background-radius: 150px;
+    -fx-padding: 30 15;
+    -fx-font-size: 20px;
+    -fx-border-color: -fx-primary-color;
+    -fx-border-radius: 150px;
+    -fx-border-width: 2px;
+    -fx-text-fill: #fff;
+}
+.wizzard_stepper_line_current{
+    -fx-stroke: -fx-primary-color;
+    -fx-stroke-width: 2px;
+}
+
+.wizzard_title{
+    -fx-font-family: 'Lato';
+    -fx-font-weight: 800;
+    -fx-font-size: 40px;
+    -fx-text-fill: #3D3D3D;
+}
+
+.wizzard_input_label{
+    -fx-font-family: 'Lato';
+    -fx-font-weight: 500;
+    -fx-font-size: 25px;
+    -fx-text-fill: #3D3D3D;
+}
+.wizzard_input{
+    -fx-font-family: 'Lato';
+    -fx-font-weight: 800;
+    -fx-font-size: 25px;
+    -fx-text-fill: #3D3D3D;
+    -fx-background-color: #fff;
+    -fx-background-radius: 10px;
+    -fx-border-color: #ccc;
+    -fx-border-radius: 10px;
+    -fx-border-width: 2px;
+    -fx-padding: 10 20;
+}
+
+
+.wizzard_date_card{
+    -fx-border-color: -fx-secoundary-color;
+    -fx-border-width:  5px;
+    -fx-text-fill: -fx-secoundary-color;
+    -fx-font-size: 25px;
+    -fx-background-color:  #fff;
+    -fx-padding: 20 30;
+    -fx-scale-x: 0.9;
+    -fx-scale-y: 0.9;
+    -fx-cursor: hand;
+}
+.wizzard_date_card:hover{
+    -fx-scale-x: 1;
+    -fx-scale-y: 1;
+}
+.wizzard_date_card:pressed{
+
+    -fx-scale-x: 0.85;
+    -fx-scale-y: 0.85;
+}
+
+.wizzard_date_card_active{
+    -fx-border-color: -fx-primary-color;
+    -fx-border-width:  5px;
+    -fx-fill: #fff;
+    -fx-font-size: 25px;
+    -fx-background-color:  -fx-primary-color;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.wizzard_time_checkbox{
+    
+    -fx-font-size: 25px;
+    -fx-text-fill: #3D3D3D;
+    -fx-padding: 10 20;
+}
+
+
+.wizzard_overview_title{
+    -fx-font-family: 'Lato';
+    -fx-font-weight: 800;
+    -fx-font-size: 30px;
+    -fx-text-fill: #3D3D3D;
+}
+.wizzard_overview{
+    -fx-font-family: 'Lato';
+    -fx-font-weight: 400;
+    -fx-font-size: 20px;
+    -fx-text-fill: #3D3D3D;
+}
+.wizzard_overview_price{
+    -fx-font-family: 'Lato';
+    -fx-font-weight: 800;
+    -fx-font-size: 50px;
+    -fx-text-fill: #3D3D3D;
+}
+.wizzard_overview_price_label{
+    -fx-font-family: 'Lato';
+    -fx-font-weight: 600;
+    -fx-font-size: 40px;
+    -fx-text-fill: #3D3D3D;
+}
+
+
+.wizzard_success_text{
+    -fx-font-family: 'Lato';
+    -fx-font-weight: 800;
+    -fx-font-size: 40px;
+    -fx-text-fill: #3D3D3D;
+}
+
+.wizzard_success_text_small{
+    -fx-font-family: 'Lato';
+    -fx-font-weight: 300;
+    -fx-font-size: 30px;
+    -fx-text-fill: #3D3D3D;
+}
+
+.wizzard_success_button{
+    -fx-font-family: 'Lato';
+    -fx-font-weight: 800;
+    -fx-font-size: 30px;
+    -fx-padding: 10 40;
+    -fx-background-color: #0A7935;
+    -fx-text-fill: #fff;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.25), 10, 0, 0, 3);
+    -fx-background-radius: 10px;
+}
+
+
 .allproducts_categories_title{
     -fx-font-family: 'Lato';
     -fx-alignment: left;
