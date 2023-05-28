@@ -3,14 +3,17 @@ package com.imatapp;
 
 import java.io.IOException;
 
+import com.imatapp.events.RefreshOrdersEvent;
 import com.imatapp.events.ShowPopupEvent;
 import com.imatapp.events.SwitchPageEvent;
 import com.imatapp.events.SwitchWizzardEvent;
+import com.imatapp.pages.History;
 import com.imatapp.components.NavigationButton;
 import javafx.animation.FadeTransition;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -82,6 +85,10 @@ public class PrimaryController  {
                     switchPage(accountPane);
                 } else if (destinationPage.equals("Varukorg")) {
                     switchPage(shoppingcartPane);
+                }else if (destinationPage.equals("Alla produkter")) {
+                    switchPage(allproductsPane);
+                }else if (destinationPage.equals("Paket")) {
+                    switchPage(packagesPane);
                 }
             } else if (event instanceof SwitchWizzardEvent) {
                 SwitchWizzardEvent switchWizzardEvent = (SwitchWizzardEvent) event;
@@ -91,6 +98,21 @@ public class PrimaryController  {
                 } else {
                     System.out.println("Exiting wizzard");
                     exitWizzard();
+                }
+            }
+            else if (event instanceof RefreshOrdersEvent) {
+                System.out.println("Refreshing orders");
+                historyPane.getChildren().clear();
+                try {
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/pages/history.fxml"));
+                    AnchorPane historyNode = fxmlLoader.load();
+                    AnchorPane.setTopAnchor(historyNode, 0.0);
+                    AnchorPane.setBottomAnchor(historyNode, 0.0);
+                    AnchorPane.setLeftAnchor(historyNode, 0.0);
+                    AnchorPane.setRightAnchor(historyNode, 0.0);
+                    historyPane.getChildren().add(historyNode);
+                } catch (IOException ex) {
+                    ex.printStackTrace();
                 }
             }
         });

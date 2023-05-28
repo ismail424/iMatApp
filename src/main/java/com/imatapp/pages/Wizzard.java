@@ -13,6 +13,7 @@ import javafx.scene.shape.Line;
 import javafx.scene.text.Text;
 
 import com.imatapp.events.RefreshOrdersEvent;
+import com.imatapp.events.SwitchPageEvent;
 import com.imatapp.events.SwitchWizzardEvent;
 
 import se.chalmers.cse.dat216.project.CartEvent;
@@ -88,9 +89,10 @@ public class Wizzard {
                 nextStep(overviewPane);
             }
             else if (currentPane == overviewPane) {
+                System.out.println("Bekräftar köp");
                 confirmOrder();
-                RefreshOrdersEvent event = new RefreshOrdersEvent();
-                nextStep.fireEvent( event );
+
+                System.out.println("Köp bekräftat");
                 goToSuccess();
             }
         });
@@ -171,7 +173,9 @@ public class Wizzard {
         });
 
         successButton.setOnAction(e -> {
+            Event.fireEvent(successButton, new RefreshOrdersEvent ());
             Event.fireEvent(successButton, new SwitchWizzardEvent( false ));
+            Event.fireEvent(successButton, new SwitchPageEvent( "Paket" ));
         });
     }
 
@@ -185,8 +189,8 @@ public class Wizzard {
     }
 
     private void confirmOrder(){
-        
         iMatDataHandler.placeOrder();
+
     }
 
     private void fillInfo(){

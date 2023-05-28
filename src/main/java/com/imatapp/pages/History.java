@@ -7,7 +7,6 @@ import com.imatapp.components.HistoryItem;
 import com.imatapp.events.RefreshOrdersEvent;
 import com.imatapp.events.SwitchPageEvent;
 
-import javafx.collections.ListChangeListener;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -25,19 +24,14 @@ public class History extends AnchorPane {
 
     @FXML
     private VBox historyItems;
-
     @FXML
     public void initialize() { 
         GoBack.setOnAction(e -> {
             Event.fireEvent(GoBack, new SwitchPageEvent("Account"));  
         });
+        displayOrders();
+    }
 
-        addEventHandler(RefreshOrdersEvent.REFRESH_ORDERS, this::handleRefreshOrdersEvent);
-        displayOrders();
-    }
-    public void handleRefreshOrdersEvent(RefreshOrdersEvent event) {
-        displayOrders();
-    }
 
     private void displayOrders() {
         List<Order> orders = iMatDataHandler.getOrders();
