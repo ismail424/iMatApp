@@ -6,7 +6,7 @@ import javafx.scene.layout.AnchorPane;
 
 public class NavigationButton {
     PrimaryController parentController;
-    AnchorPane pane;
+    public AnchorPane pane;
     Boolean isNavbar;
     Button button;
 
@@ -25,7 +25,14 @@ public class NavigationButton {
             }
             parentController.switchPage( pane );
         });
+
+
+    }
+    public void setActive(){
+        button.getStyleClass().add("navbar_active");
     }
 
-  
+    public void setInactive(){
+        button.getStyleClass().remove("navbar_active");
+    }
 }

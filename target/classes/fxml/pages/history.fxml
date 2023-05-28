@@ -13,7 +13,10 @@
             <Button fx:id="GoBack" mnemonicParsing="false" styleClass="back_button" text="Tillbaka till konto" />
             <ScrollPane fitToHeight="true" fitToWidth="true" VBox.vgrow="ALWAYS">
                <content>
-                  <VBox fx:id="historyItems" spacing="20.0" />
+                  <VBox fx:id="historyItems" spacing="20.0">
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding></VBox>
                </content>
                <VBox.margin>
                   <Insets top="10.0" />

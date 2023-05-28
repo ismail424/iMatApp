@@ -102,6 +102,14 @@ public class PrimaryController  {
                     } catch (IOException ioException) {
                         ioException.printStackTrace();
                     }
+                    for (NavigationButton navButton : navigationButtons) {
+                        navButton.setInactive();
+                    }
+                    for (NavigationButton navButton : navigationButtons) {
+                        if (navButton.pane == packagesPane) {
+                            navButton.setActive();
+                        }
+                    }
 
                     switchPage(packagesPane);
                 }
