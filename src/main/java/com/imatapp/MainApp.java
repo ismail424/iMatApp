@@ -30,7 +30,7 @@ public class MainApp extends Application {
         stage.setTitle(title); 
         stage.setScene(scene);
         stage.minWidthProperty().setValue(1100);
-        stage.minHeightProperty().setValue(800);
+        stage.minHeightProperty().setValue(600);
         stage.show();   
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
