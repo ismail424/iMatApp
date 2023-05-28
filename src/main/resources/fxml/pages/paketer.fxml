@@ -111,12 +111,12 @@
                            <children>
                               <Text fill="#282828" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="package_card_item_amount" text="+4 Varor Till" textAlignment="CENTER" wrappingWidth="170.67499923706055">
                                  <font>
-                                    <Font name="Lato Regular" size="24.0" />
+                                    <Font name="Lato Regular" size="20.0" />
                                  </font>
                               </Text>
                               <Text fill="#0a7935" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="package_card_showall" text="Vissa Allt" textAlignment="CENTER" wrappingWidth="170.67499923706055">
                                  <font>
-                                    <Font name="Lato Bold" size="36.0" />
+                                    <Font name="Lato Bold" size="25.0" />
                                  </font>
                               </Text>
                            </children>
@@ -159,7 +159,7 @@
                                     <Image url="@../../images/apple.png" />
                                  </image>
                               </ImageView>
-                              <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                              <VBox alignment="CENTER_LEFT" spacing="5.0" HBox.hgrow="ALWAYS">
                                  <children>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="package_card_item_title" text="Äpplen" />
                                     <HBox>
@@ -190,7 +190,7 @@
                                     <Image url="@../../images/apple.png" />
                                  </image>
                               </ImageView>
-                              <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="5.0" HBox.hgrow="ALWAYS">
+                              <VBox alignment="CENTER_LEFT" spacing="5.0" HBox.hgrow="ALWAYS">
                                  <children>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="package_card_item_title" text="Äpplen" />
                                     <HBox>
@@ -249,12 +249,12 @@
                            <children>
                               <Text fill="#282828" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="package_card_item_amount" text="+4 Varor Till" textAlignment="CENTER" wrappingWidth="170.67499923706055">
                                  <font>
-                                    <Font name="Lato Regular" size="24.0" />
+                                    <Font name="Lato Regular" size="20.0" />
                                  </font>
                               </Text>
                               <Text fill="#0a7935" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="package_card_showall" text="Vissa Allt" textAlignment="CENTER" wrappingWidth="170.67499923706055">
                                  <font>
-                                    <Font name="Lato Bold" size="36.0" />
+                                    <Font name="Lato Bold" size="25.0" />
                                  </font>
                               </Text>
                            </children>

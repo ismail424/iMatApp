@@ -9,10 +9,10 @@
 */
 .navbar_buttons{
     -fx-background-color: -fx-secoundary-color;
-    -fx-padding:  10 78 10 78;
+    -fx-padding:  5 78 5 78;
     -fx-font-family: "Lato";
     -fx-text-fill: white;
-    -fx-font-size: 32px;
+    -fx-font-size: 26px;
     -fx-font-weight: 700;
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.25), 10, 0, 0, 3);
     -fx-background-radius: 10px;
@@ -92,16 +92,16 @@
     -fx-scale-y: 0.9;
 }
 .package_card_title{
-    -fx-font-size: 50px;
+    -fx-font-size: 34px;
     -fx-font-weight: 800;
     -fx-fill: -fx-secoundary-color;
 }
 .package_card_button{
-    -fx-font-size: 28px;
+    -fx-font-size: 23px;
     -fx-font-weight: 500;
     -fx-text-fill: white;
     -fx-font-family: 'Lato';
-    -fx-padding: 10 40 10 40;
+    -fx-padding: 5 40 5 40;
     -fx-background-radius: 50px;
     -fx-background-color: -fx-secoundary-color;
 }
@@ -135,20 +135,20 @@
 }
 
 .package_card_totalprice_sum{
-    -fx-font-size: 70px;
+    -fx-font-size: 50px;
     -fx-font-weight: 900;
     -fx-fill: #3D3D3D;
 }
 
 
 .package_card_item_title{
-    -fx-font-size: 35px;
+    -fx-font-size: 30px;
     -fx-font-weight: 800;
     -fx-fill: -fx-secoundary-color;
 }
 
 .package_card_item_price{
-    -fx-font-size: 35px;
+    -fx-font-size: 30px;
     -fx-font-weight: 800;
     -fx-fill: -fx-primary-color;
 }
@@ -157,7 +157,7 @@
     -fx-fill: -fx-primary-color;
 }
 .package_card_item_unit{
-    -fx-font-size: 35px;
+    -fx-font-size: 30px;
     -fx-fill: -fx-secoundary-color;
     -fx-font-weight: 400;
 
@@ -166,7 +166,7 @@
 
 .package_popup_addtocart{
     -fx-text-fill: #fff;
-    -fx-font-size: 30px;
+    -fx-font-size: 26px;
     -fx-font-weight: 600;
     -fx-font-family: 'Lato';
     -fx-background-color: #333333;
@@ -331,8 +331,8 @@
 .wizzard_stepper_button{
     -fx-background-color:transparent;
     -fx-background-radius: 10px;
-    -fx-padding: 30 15;
-    -fx-font-size: 20px;
+    -fx-padding: 15 19;
+    -fx-font-size: 15px;
     -fx-border-color: #333;
     -fx-border-radius: 150px;
     -fx-border-width: 2px;
@@ -354,7 +354,7 @@
 .wizzard_stepper_curent{
     -fx-background-color: -fx-primary-color;
     -fx-background-radius: 150px;
-    -fx-padding: 30 15;
+    -fx-padding: 10 15;
     -fx-font-size: 20px;
     -fx-border-color: -fx-primary-color;
     -fx-border-radius: 150px;
@@ -369,27 +369,27 @@
 .wizzard_title{
     -fx-font-family: 'Lato';
     -fx-font-weight: 800;
-    -fx-font-size: 40px;
+    -fx-font-size: 30px;
     -fx-text-fill: #3D3D3D;
 }
 
 .wizzard_input_label{
     -fx-font-family: 'Lato';
     -fx-font-weight: 500;
-    -fx-font-size: 25px;
+    -fx-font-size: 20px;
     -fx-text-fill: #3D3D3D;
 }
 .wizzard_input{
     -fx-font-family: 'Lato';
     -fx-font-weight: 800;
-    -fx-font-size: 25px;
+    -fx-font-size: 16px;
     -fx-text-fill: #3D3D3D;
     -fx-background-color: #fff;
     -fx-background-radius: 10px;
     -fx-border-color: #ccc;
     -fx-border-radius: 10px;
     -fx-border-width: 2px;
-    -fx-padding: 10 20;
+    -fx-padding: 4 10;
 }
 
 
@@ -397,9 +397,9 @@
     -fx-border-color: -fx-secoundary-color;
     -fx-border-width:  5px;
     -fx-text-fill: -fx-secoundary-color;
-    -fx-font-size: 25px;
+    -fx-font-size: 20px;
     -fx-background-color:  #fff;
-    -fx-padding: 20 30;
+    -fx-padding: 15 50;
     -fx-scale-x: 0.9;
     -fx-scale-y: 0.9;
     -fx-cursor: hand;
@@ -420,15 +420,15 @@
     -fx-fill: #fff;
     -fx-font-size: 25px;
     -fx-background-color:  -fx-primary-color;
-    -fx-scale-x: 1.05;
-    -fx-scale-y: 1.05;
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
 }
 
 .wizzard_time_checkbox{
     
-    -fx-font-size: 25px;
+    -fx-font-size: 20px;
     -fx-text-fill: #3D3D3D;
-    -fx-padding: 10 20;
+    -fx-padding: 5 10;
 }
 
 

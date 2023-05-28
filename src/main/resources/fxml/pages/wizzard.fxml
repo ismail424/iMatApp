@@ -17,7 +17,7 @@
 
 <StackPane fx:id="stackPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.imatapp.pages.Wizzard">
    <children>
-      <VBox fx:id="formPane" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="960.0" minWidth="650.0" prefHeight="960.0" prefWidth="1100.0">
+      <VBox fx:id="formPane" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="640.0" minWidth="650.0" prefHeight="700.0" prefWidth="1100.0">
          <children>
             <HBox fx:id="stepper" alignment="CENTER">
                <children>
@@ -40,10 +40,7 @@
                   <Insets bottom="10.0" top="10.0" />
                </VBox.margin>
                <children>
-                  <BorderPane fx:id="uppgifterPane" prefHeight="200.0" prefWidth="200.0">
-                     <padding>
-                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
-                     </padding>
+                  <BorderPane fx:id="uppgifterPane">
                      <top>
                         <VBox spacing="10.0" BorderPane.alignment="CENTER">
                            <children>
@@ -53,46 +50,49 @@
                         </VBox>
                      </top>
                      <center>
-                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" BorderPane.alignment="CENTER">
+                        <VBox BorderPane.alignment="CENTER">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_input_label" text="Namn" />
-                              <TextField fx:id="firstNameField" promptText="Namn" styleClass="wizzard_input_label" />
+                              <TextField fx:id="firstNameField" prefHeight="31.0" prefWidth="1020.0" promptText="Namn" styleClass="wizzard_input_label" VBox.vgrow="ALWAYS" />
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_input_label" text="Efternamn:">
                                  <VBox.margin>
                                     <Insets top="10.0" />
                                  </VBox.margin>
                               </Text>
-                              <TextField fx:id="lastNameField" promptText="Efternamn" styleClass="wizzard_input_label" />
+                              <TextField fx:id="lastNameField" prefHeight="29.0" prefWidth="960.0" promptText="Efternamn" styleClass="wizzard_input_label" VBox.vgrow="ALWAYS" />
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_input_label" text="Telefonnummer:">
                                  <VBox.margin>
                                     <Insets top="10.0" />
                                  </VBox.margin>
                               </Text>
-                              <TextField fx:id="phoneNumberField" promptText="Telefonnummer" styleClass="wizzard_input_label" />
+                              <TextField fx:id="phoneNumberField" promptText="Telefonnummer" styleClass="wizzard_input_label" VBox.vgrow="ALWAYS" />
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_input_label" text="E-post:">
                                  <VBox.margin>
                                     <Insets top="10.0" />
                                  </VBox.margin>
                               </Text>
-                              <TextField fx:id="emailField" promptText="E-post" styleClass="wizzard_input_label" />
+                              <TextField fx:id="emailField" promptText="E-post" styleClass="wizzard_input_label" VBox.vgrow="ALWAYS" />
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_input_label" text="Adress:">
                                  <VBox.margin>
                                     <Insets top="10.0" />
                                  </VBox.margin>
                               </Text>
-                              <TextField fx:id="addressField" promptText="Adress" styleClass="wizzard_input_label" />
+                              <TextField fx:id="addressField" promptText="Adress" styleClass="wizzard_input_label" VBox.vgrow="ALWAYS" />
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_input_label" text="Postnummer">
                                  <VBox.margin>
                                     <Insets top="10.0" />
                                  </VBox.margin>
                               </Text>
-                              <TextField fx:id="postCodeField" promptText="Postnummer" styleClass="wizzard_input_label" />
+                              <TextField fx:id="postCodeField" promptText="Postnummer" styleClass="wizzard_input_label" VBox.vgrow="ALWAYS" />
                            </children>
                            <BorderPane.margin>
                               <Insets top="10.0" />
                            </BorderPane.margin>
                         </VBox>
                      </center>
+                     <padding>
+                        <Insets left="30.0" right="30.0" />
+                     </padding>
                   </BorderPane>
                   <BorderPane fx:id="leveransPane" prefHeight="200.0" prefWidth="200.0" visible="false">
                      <padding>
@@ -112,11 +112,11 @@
                               <Insets top="10.0" />
                            </BorderPane.margin>
                            <children>
-                              <VBox fx:id="vboxTimePick" spacing="10.0" VBox.vgrow="ALWAYS">
+                              <VBox fx:id="vboxTimePick" spacing="5.0" VBox.vgrow="ALWAYS">
                                  <children>
-                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                    <HBox>
                                        <children>
-                                          <BorderPane fx:id="todayDate" prefHeight="200.0" prefWidth="200.0" styleClass="wizzard_date_card">
+                                          <BorderPane fx:id="todayDate" styleClass="wizzard_date_card">
                                              <center>
                                                 <Text fx:id="todayDateText" strokeType="OUTSIDE" strokeWidth="0.0" text="23 Maj" BorderPane.alignment="CENTER" />
                                              </center>
@@ -124,7 +124,7 @@
                                                 <Insets right="30.0" />
                                              </HBox.margin>
                                           </BorderPane>
-                                          <BorderPane fx:id="tomorrowDate" prefHeight="200.0" prefWidth="200.0">
+                                          <BorderPane fx:id="tomorrowDate">
                                              <center>
                                                 <Text fx:id="tomorrowDateText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_date_card_active" text="24 Maj" BorderPane.alignment="CENTER" />
                                              </center>
@@ -136,7 +136,7 @@
                                                 <String fx:value="wizzard_date_card_active" />
                                              </styleClass>
                                           </BorderPane>
-                                          <BorderPane fx:id="twoDaysDate" prefHeight="200.0" prefWidth="200.0" styleClass="wizzard_date_card">
+                                          <BorderPane fx:id="twoDaysDate" styleClass="wizzard_date_card">
                                              <center>
                                                 <Text fx:id="twoDaysDateText" strokeType="OUTSIDE" strokeWidth="0.0" text="25 Maj" BorderPane.alignment="CENTER" />
                                              </center>
@@ -221,9 +221,9 @@
                         </VBox>
                      </center>
                   </BorderPane>
-                  <BorderPane fx:id="overviewPane" prefHeight="200.0" prefWidth="200.0" visible="false">
+                  <BorderPane fx:id="overviewPane" visible="false">
                      <padding>
-                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                        <Insets left="30.0" right="30.0" top="10.0" />
                      </padding>
                      <top>
                         <VBox spacing="10.0" BorderPane.alignment="CENTER">
@@ -234,7 +234,7 @@
                         </VBox>
                      </top>
                      <center>
-                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="5.0" BorderPane.alignment="CENTER">
+                        <VBox spacing="2.0" BorderPane.alignment="CENTER">
                            <children>
                               <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_overview_title" text="Information" />
                               <Text fx:id="orderNmr" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_overview" text="Order nummer: 1" />
@@ -249,13 +249,7 @@
                               <Text fx:id="orderName" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_overview" text="Jane Doe" />
                               <Text fx:id="orderAdress" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_overview" text="3 Newbridge Court " />
                               <Separator prefWidth="200.0" />
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_overview_title" text="Betalning metod" />
-                              <ImageView fitHeight="166.0" fitWidth="384.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../images/Payment.png" />
-                                 </image>
-                              </ImageView>
-                              <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" VBox.vgrow="ALWAYS">
+                              <HBox alignment="CENTER_RIGHT" prefHeight="91.0" prefWidth="1020.0" spacing="5.0">
                                  <children>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_overview_price_label" text="Total pris:" />
                                     <Text fx:id="orderPrice" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="wizzard_overview_price" text="500 kr" />
@@ -286,7 +280,7 @@
             <StackPane prefHeight="150.0" prefWidth="200.0" />
          </children>
          <padding>
-            <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+            <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
          </padding>
       </VBox>
       <BorderPane fx:id="successPane" prefHeight="200.0" prefWidth="200.0" visible="false">

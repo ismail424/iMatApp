@@ -18,13 +18,13 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" minHeight="600.0" minWidth="1100.0" prefHeight="600.0" prefWidth="1228.0" style="-fx-background-color: #F3F3F3;" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.imatapp.PrimaryController">
+<AnchorPane id="AnchorPane" minHeight="660.0" minWidth="1100.0" prefHeight="660.0" prefWidth="1228.0" style="-fx-background-color: #F3F3F3;" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.imatapp.PrimaryController">
     <children>
       <StackPane fx:id="mainStackPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <BorderPane fx:id="allContent" maxHeight="1.7976931348623157E308" style="-fx-background-color: #fff;">
                <top>
-                  <AnchorPane maxHeight="170.0" minHeight="110.0" minWidth="-Infinity">
+                  <AnchorPane maxHeight="160.0" minHeight="90.0" minWidth="-Infinity">
                      <children>
                         <VBox spacing="20.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
                            <children>
