@@ -189,6 +189,9 @@ public class Wizzard {
     }
 
     private void confirmOrder(){
+        if (iMatDataHandler.getShoppingCart().getItems().size() == 0) {
+            return;
+        }
         iMatDataHandler.placeOrder();
 
     }

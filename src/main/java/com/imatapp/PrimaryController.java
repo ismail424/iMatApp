@@ -88,6 +88,21 @@ public class PrimaryController  {
                 }else if (destinationPage.equals("Alla produkter")) {
                     switchPage(allproductsPane);
                 }else if (destinationPage.equals("Paket")) {
+
+                    // refresh the wizard page
+                    wizzardPane.getChildren().clear();
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/pages/wizzard.fxml"));
+                    try {
+                        StackPane wizzardNode = fxmlLoader.load();
+                        AnchorPane.setTopAnchor(wizzardNode, 0.0);
+                        AnchorPane.setBottomAnchor(wizzardNode, 0.0);
+                        AnchorPane.setLeftAnchor(wizzardNode, 0.0);
+                        AnchorPane.setRightAnchor(wizzardNode, 0.0);
+                        wizzardPane.getChildren().add(wizzardNode);
+                    } catch (IOException ioException) {
+                        ioException.printStackTrace();
+                    }
+
                     switchPage(packagesPane);
                 }
             } else if (event instanceof SwitchWizzardEvent) {
