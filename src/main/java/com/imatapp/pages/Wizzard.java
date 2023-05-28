@@ -11,6 +11,8 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Line;
 import javafx.scene.text.Text;
+
+import com.imatapp.events.RefreshOrdersEvent;
 import com.imatapp.events.SwitchWizzardEvent;
 
 import se.chalmers.cse.dat216.project.CartEvent;
@@ -87,6 +89,8 @@ public class Wizzard {
             }
             else if (currentPane == overviewPane) {
                 confirmOrder();
+                RefreshOrdersEvent event = new RefreshOrdersEvent();
+                nextStep.fireEvent( event );
                 goToSuccess();
             }
         });
